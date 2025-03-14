@@ -1,12 +1,16 @@
 <mat-toolbar color="primary">
-    <span>Home</span>
-    <span class="spacer"></span>
-    <button mat-icon-button (click)="logout()" aria-label="Botão de logout">
-      <mat-icon>logout</mat-icon>
-    </button>
-  </mat-toolbar>
-  
-  <div class="content">
-    <h1>Welcome!</h1>
-    <p>Initial Page</p>
-  </div>
+  <span>{{ 'HOME.TITLE' | translate }}</span>
+  <span class="spacer"></span>
+
+  <button mat-button (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
+  <button mat-button (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
+
+  <button mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="content">
+  <h1>{{ 'HOME.WELCOME' | translate }}</h1>
+  <p>{{ 'HOME.PAGE_DESCRIPTION' | translate }}</p>
+</div>

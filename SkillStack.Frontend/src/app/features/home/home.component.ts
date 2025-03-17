@@ -19,7 +19,7 @@ export class HomeComponent {
   logout(): void {
     this.authService.logout().subscribe({
       next: () => {
-        localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
         this.router.navigate(['/login']);
       },
       error: (error) => {

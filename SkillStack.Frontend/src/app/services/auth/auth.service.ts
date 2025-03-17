@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   isAuthenticated(): boolean {
-    return !!localStorage.getItem('token');
+    return !!sessionStorage.getItem('token');
   }
 
   login(email: string, password: string): Observable<{ token: string }> {
@@ -32,7 +32,7 @@ export class AuthService {
   }
 
   logout(): Observable<{ message: string }> {
-    const token = localStorage.getItem('token');
+    const token = sessionStorage.getItem('token');
     return this.http.post<{ message: string }>(
       `${this.apiUrl}/auth/logout`, 
       {},

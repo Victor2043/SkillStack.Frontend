@@ -1,1 +1,13 @@
+<mat-toolbar color="primary" *ngIf="showToolbar">
+    <span>{{ 'HOME.TITLE' | translate }}</span>
+    <span class="spacer"></span>
+  
+    <button mat-button (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
+    <button mat-button (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
+  
+    <button mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
 <router-outlet></router-outlet>

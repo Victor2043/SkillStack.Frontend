@@ -1,15 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { environment } from '../../../environments/environment'; 
+import { BehaviorSubject, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = environment.apiUrl; 
+  private apiUrl = environment.apiUrl;
+  private loggedIn = new BehaviorSubject<boolean>(false);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {   
+    this.loggedIn.next(this.isAuthenticated());
+  }
+
+  isLoggedIn(): Observable<boolean> {
+    return this.loggedIn.asObservable();
+  }
 
   isAuthenticated(): boolean {
     return !!sessionStorage.getItem('token');
@@ -17,24 +25,35 @@ export class AuthService {
 
   login(email: string, password: string): Observable<{ token: string }> {
     return this.http.post<{ token: string }>(
-      `${this.apiUrl}/auth/login`, 
+      `${this.apiUrl}/auth/login`,
       { email, password },
       { withCredentials: true }
+    ).pipe(
+      tap(response => {
+        // Armazena o token no sessionStorage e atualiza o estado
+        sessionStorage.setItem('token', response.token);
+        this.loggedIn.next(true);
+      })
     );
   }
 
   refreshToken(): Observable<{ token: string }> {
     return this.http.post<{ token: string }>(
-      `${this.apiUrl}/auth/refresh-token`, 
-      {}, 
+      `${this.apiUrl}/auth/refresh-token`,
+      {},
       { withCredentials: true }
+    ).pipe(
+      tap(response => {
+        sessionStorage.setItem('token', response.token);
+        this.loggedIn.next(true);
+      })
     );
   }
 
   logout(): Observable<{ message: string }> {
     const token = sessionStorage.getItem('token');
     return this.http.post<{ message: string }>(
-      `${this.apiUrl}/auth/logout`, 
+      `${this.apiUrl}/auth/logout`,
       {},
       {
         headers: new HttpHeaders({
@@ -42,6 +61,11 @@ export class AuthService {
         }),
         withCredentials: true
       }
+    ).pipe(
+      tap(() => {
+        sessionStorage.removeItem('token');
+        this.loggedIn.next(false);
+      })
     );
   }
 }

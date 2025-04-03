@@ -1,0 +1,53 @@
+<div class="register-container">
+    <h2>Create Your Account</h2>
+    
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" formControlName="name">
+        <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="error">
+          Name is required
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email">
+        <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="error">
+          Please enter a valid email
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username">
+        <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched" class="error">
+          Username is required
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="passwordHash">Password</label>
+        <input type="password" id="passwordHash" formControlName="passwordHash">
+        <div *ngIf="registerForm.get('passwordHash')?.invalid && registerForm.get('passwordHash')?.touched" class="error">
+          Password must be at least 6 characters
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="isLoading || registerForm.invalid" class="submit-btn">
+        {{ isLoading ? 'Creating account...' : 'Register' }}
+      </button>
+  
+      <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+      </div>
+  
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+    </form>
+  
+    <div class="login-link">
+      Already have an account? <a (click)="navigateToLogin()">Sign in</a>
+    </div>
+  </div>

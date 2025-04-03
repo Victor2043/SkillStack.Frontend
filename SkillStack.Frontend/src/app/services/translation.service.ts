@@ -10,7 +10,6 @@ export class TranslationService {
     this.translate.addLangs(['pt-br', 'en-us']);
     this.translate.setDefaultLang('pt-br');
 
-    // Define o idioma salvo no localStorage ou usa 'pt-br' como padrão
     const savedLanguage = localStorage.getItem('appLanguage') || 'pt-br';
     this.translate.use(savedLanguage);
 
@@ -21,7 +20,7 @@ export class TranslationService {
   setLanguage(lang: string) {
     console.log(`Alterando idioma para: ${lang}`);
     this.translate.use(lang);
-    localStorage.setItem('appLanguage', lang); // Salva o idioma no localStorage
+    localStorage.setItem('appLanguage', lang);
   }
 
   getTranslation(key: string): Observable<string> {

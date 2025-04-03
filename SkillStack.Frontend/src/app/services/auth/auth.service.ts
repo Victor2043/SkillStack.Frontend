@@ -30,7 +30,6 @@ export class AuthService {
       { withCredentials: true }
     ).pipe(
       tap(response => {
-        // Armazena o token no sessionStorage e atualiza o estado
         sessionStorage.setItem('token', response.token);
         this.loggedIn.next(true);
       })
@@ -65,6 +64,14 @@ export class AuthService {
       tap(() => {
         sessionStorage.removeItem('token');
         this.loggedIn.next(false);
+      })
+    );
+  }
+
+  activateUser(token: string): Observable<any> {
+    return this.http.get<string>(`${this.apiUrl}/users/activate?token=${token}`).pipe(
+      tap(response => {
+        console.log(response); 
       })
     );
   }

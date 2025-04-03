@@ -6,6 +6,7 @@ import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { routes } from '../src/app/app.routes';
 import { provideRouter } from '@angular/router';
+import { provideAnimations } from '@angular/platform-browser/animations';
 export function HttpLoaderFactory(http: any) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
@@ -14,6 +15,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),
     provideRouter(routes),
+    provideAnimations(),
      importProvidersFrom(
        TranslateModule.forRoot({
          loader: {

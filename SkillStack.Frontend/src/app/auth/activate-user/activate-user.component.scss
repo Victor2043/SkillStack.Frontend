@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  
+  .activation-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+  }
+  .card-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .centered-title {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+  .success-message {
+    color: #4caf50;
+    font-size: 18px;
+  }
+  
+  .error-message {
+    color: #f44336;
+    font-size: 18px;
+  }
+  
+  .loading {
+    margin: 20px 0;
+    font-style: italic;
+    color: #757575;
+  }
+
+  mat-card-actions {
+    justify-content: center;
+  }

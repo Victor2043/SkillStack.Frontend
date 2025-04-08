@@ -1,13 +1,27 @@
 <mat-toolbar color="primary" *ngIf="showToolbar">
-    <span>{{ 'HOME.TITLE' | translate }}</span>
-    <span class="spacer"></span>
-  
-    <button mat-button (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
-    <button mat-button (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
-  
-    <button mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
-      <mat-icon>logout</mat-icon>
+  <!-- Título à esquerda -->
+  <span>{{ currentPageTitle }}</span>
+
+  <!-- Espaçador para empurrar o menu ao centro -->
+  <span class="spacer"></span>
+
+  <!-- Menu horizontal no centro -->
+  <div class="menu-container">
+    <button mat-button *ngFor="let page of pages" (click)="navigateTo(page.path)">
+      {{ page.label }}
     </button>
-  </mat-toolbar>
+  </div>
+
+  <!-- Espaçador para alinhar os botões à direita -->
+  <span class="spacer"></span>
+
+  <!-- Botões de idioma e logout à direita -->
+  <button mat-button (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
+  <button mat-button (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
+
+  <button mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

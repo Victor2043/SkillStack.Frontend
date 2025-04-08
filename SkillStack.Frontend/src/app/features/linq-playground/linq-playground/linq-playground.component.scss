@@ -1,0 +1,60 @@
+.linq-playground-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.editor {
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.run-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .linq-playground-container {
+    padding: 10px;
+  }
+
+  .editor {
+    height: 200px;
+  }
+}

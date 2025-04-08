@@ -1,0 +1,19 @@
+<div class="linq-playground-container">
+    <h1>🔍 LINQ Playground</h1>
+    <p class="description">
+      Experimente queries LINQ em tempo real. Os dados mockados estão disponíveis na tabela abaixo.
+    </p>
+  
+    <div id="editor-container" class="editor"></div>
+  
+    <button class="run-button" (click)="execute()">
+      ▶ Executar Query
+    </button>
+  
+    <div class="result-section" *ngIf="results">
+      <h3>🎯 Resultado da Query</h3>
+      <div *ngIf="results">
+        <pre>{{ results | json }}</pre> <!-- Mostra qualquer JSON -->
+      </div>
+    </div>
+  </div>

@@ -53,7 +53,6 @@ export class AppComponent {
 
     this.selectedLanguage = this.translationService.getCurrentLanguage();
 
-    // Atualiza os rótulos das páginas com base no idioma
     this.updatePageLabels();
 
     this.router.events.pipe(
@@ -79,7 +78,6 @@ export class AppComponent {
     });
   }
 
-  // Atualiza os rótulos das páginas com traduções
   private updatePageLabels() {
     this.pages.forEach(page => {
       this.translate.get(page.labelKey).subscribe((text: string) => {
@@ -106,10 +104,9 @@ export class AppComponent {
       this.translatedLogout = text;
     });
     this.updatePageTitle();
-    this.updatePageLabels(); // Atualiza os rótulos do menu ao mudar o idioma
+    this.updatePageLabels(); 
   }
 
-  // Navega para a página selecionada
   navigateTo(path: string) {
     this.router.navigate([path]);
   }

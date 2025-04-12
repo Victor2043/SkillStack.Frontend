@@ -1,9 +1,60 @@
 {
-    "LOGOUT":"Sair",
-    "HOME": {
-      "TITLE": "Início",
-      "WELCOME": "Bem-vindo!",
-      "PAGE_DESCRIPTION": "Página Inicial"
-  }    
+  "HOME": {
+    "TITLE": "Início",
+    "HERO": {
+      "TITLE": "Victor Alves",
+      "SUBTITLE": "Desenvolvedor Full-Stack | Angular & .NET",
+      "BUTTON": "Explore Meu Trabalho"
+    },
+    "ABOUT": {
+      "TITLE": "Sobre Mim",
+      "DESCRIPTION": "Sou Victor Alves, Entusiasta de tecnologia desde criança, fui de cursinhos de montagem de computador até a programação. . Hoje, sou desenvolvedor com uma experiência sólida em Python, Angular e .NET, mas sempre aberto a aprender novas tecnologias.Nos momentos livres, gosto de fazer exercícios, jogar videogames e partidas de baralho com amigos."
+    },
+    "EXPERIENCES": {
+      "TITLE": "Experiências",
+      "BE3": {
+        "COMPANY": "Be3 Health Tech",
+        "PERIOD": "Março 2020 – Julho 2021",
+        "ROLE1": {
+          "TITLE": "Estagiário",
+          "PERIOD": "Março 2020 – Dezembro 2020",
+          "ACTIVITY1": "Desenvolvi telas no front-end",
+          "ACTIVITY2": "Criei algumas funcionalidades no back-end"
+        },
+        "ROLE2": {
+          "TITLE": "Técnico em Programação",
+          "PERIOD": "Janeiro 2021 – Julho 2021",
+          "ACTIVITY1": "Gerenciei uma API com RPA",
+          "ACTIVITY2": "Criei consultas no banco usando stored procedures"
+        }
+      },
+      "VICERI": {
+        "COMPANY": "Viceri-Seidor",
+        "PERIOD": "Julho 2021 – Atual",
+        "ROLE1": {
+          "TITLE": "Analista Desenvolvedor Junior",
+          "PERIOD": "Julho 2021 – Abril 2022",
+          "ACTIVITY1": "Atuei como desenvolvedor full-stack (front-end, back-end e consultas no banco)",
+          "ACTIVITY2": "Realizei revisões de código"
+        },
+        "ROLE2": {
+          "TITLE": "Analista Desenvolvedor Pleno",
+          "PERIOD": "Maio 2022 – Atual",
+          "ACTIVITY1": "Trabalhei em projetos com RPA",
+          "ACTIVITY2": "Otimizei consultas no banco com stored procedures",
+          "ACTIVITY3": "Orientei desenvolvedores trainees"
+        }
+      }
+    },
+    "TECHNOLOGIES": {
+      "TITLE": "Tecnologias"
+    },
+    "CTA": {
+      "TEXT": "Quer ver um projeto prático? Confira os projetos",
+      "BUTTON1": "Project 1",
+      "BUTTON2": "Project 2",
+      "BUTTON3": "Project 3"
+    }
+  },
+  "LOGOUT": "Sair"
 }
-  

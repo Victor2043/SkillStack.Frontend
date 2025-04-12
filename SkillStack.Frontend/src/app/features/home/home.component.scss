@@ -1,12 +1,108 @@
-.spacer {
-    flex: 1 1 auto;
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
-  
-  .content {
-    padding: 16px;
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+.about {
+  padding: 20px;
+  mat-card {
+    max-width: 800px;
+    margin: 0 auto;    
+  }
+}
+
+.experiences {
+  padding: 40px 20px;
+  h2 {
     text-align: center;
+    margin-bottom: 40px;
   }
-  
-  mat-icon {
-    color: white;
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #3f51b5; 
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        background: #3f51b5;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+      .timeline-content {
+        width: 45%;
+        margin-right: 20px;
+        padding: 20px;
+        box-shadow: -0.1em -0.1em 1em gray;
+      }
+      &:nth-child(even) {
+        justify-content: flex-start;
+        .timeline-content {
+          margin-right: 0;
+          margin-left: 20px;
+        }
+      }
+    }
   }
+}
+
+.technologies {
+  padding: 20px;
+  text-align: center;
+  box-shadow: -0.1em -0.1em 1em gray;
+  h2 {
+    margin-bottom: 20px;
+  }
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    span {
+      padding: 10px 20px;
+      background: #e0e0e0;
+      border-radius: 20px;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}

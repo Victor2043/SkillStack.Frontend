@@ -1,4 +1,54 @@
-<div class="content">
-  <h1>{{ 'HOME.WELCOME' | translate }}</h1>
-  <p>{{ 'HOME.PAGE_DESCRIPTION' | translate }}</p>
-</div>
+<section class="hero">
+  <h1>{{ 'HOME.HERO.TITLE' | translate }}</h1>
+  <p>{{ 'HOME.HERO.SUBTITLE' | translate }}</p>
+</section>
+
+<section class="about">
+  <mat-card>
+    <mat-card-title>{{ 'HOME.ABOUT.TITLE' | translate }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ 'HOME.ABOUT.DESCRIPTION' | translate }}</p>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<section class="experiences">
+  <h2>{{ 'HOME.EXPERIENCES.TITLE' | translate }}</h2>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let exp of experiences; let i = index">
+      <div class="timeline-dot"></div>
+      <mat-card class="timeline-content">
+        <mat-card-title>{{ exp.company | translate }}</mat-card-title>
+        <mat-card-subtitle>{{ exp.period | translate }}</mat-card-subtitle>
+        <mat-card-content>
+          <div *ngFor="let role of exp.roles">
+            <h3>{{ role.title | translate }} ({{ role.period | translate }})</h3>
+            <ul>
+              <li *ngFor="let activity of role.activities">{{ activity | translate }}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<section class="technologies">
+  <h2>{{ 'HOME.TECHNOLOGIES.TITLE' | translate }}</h2>
+  <div class="tech-list">
+    <span *ngFor="let tech of technologies">{{ tech }}</span>
+  </div>
+</section>
+
+<section class="cta">
+  <p>{{ 'HOME.CTA.TEXT' | translate }}</p>
+  <button mat-raised-button color="primary" (click)="navigateToProject('project')">
+    {{ 'HOME.CTA.BUTTON1' | translate }}
+  </button>
+  <button mat-raised-button color="accent" (click)="navigateToProject('project')">
+    {{ 'HOME.CTA.BUTTON2' | translate }}
+  </button>
+  <button mat-raised-button color="warn" (click)="navigateToProject('project')">
+    {{ 'HOME.CTA.BUTTON3' | translate }}
+  </button>
+</section>

@@ -45,7 +45,7 @@ export class AppComponent {
 
   private routeTitleMap: { [key: string]: string } = {
     '/linq-playground': 'LINQ.TITLE',
-    '/problem-solving': 'PROBLEM-SOLVING.TITLE',
+    '/problem-solving-showcase': 'PROBLEM-SOLVING.TITLE',
     '': 'HOME.TITLE' 
   };
   constructor(

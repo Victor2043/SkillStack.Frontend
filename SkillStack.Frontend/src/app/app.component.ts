@@ -39,6 +39,7 @@ export class AppComponent {
 
   pages = [
     { path: 'home', labelKey: 'HOME.TITLE', label: '' },
+    { path: 'problem-solving-showcase', labelKey: 'PROBLEM-SOLVING.TITLE', label: '' },
     { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' }
   ];
 

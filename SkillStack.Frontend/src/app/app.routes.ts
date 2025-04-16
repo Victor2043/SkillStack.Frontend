@@ -4,11 +4,13 @@ import { HomeComponent } from './features/home/home.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { RegisterUserComponent } from './auth/register-user/register-user.component';
 import { ActivateUserComponent } from './auth/activate-user/activate-user.component';
+import { LinqPlaygroundComponent } from './features/linq-playground/linq-playground/linq-playground.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterUserComponent },
   { path: 'activate', component: ActivateUserComponent },
+  { path: 'linq-playground', component: LinqPlaygroundComponent, canActivate: [AuthGuard] },  
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];

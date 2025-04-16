@@ -38,7 +38,8 @@ export class AppComponent {
   ];
 
   pages = [
-    { path: '', labelKey: 'HOME.TITLE', label: '' }
+    { path: 'home', labelKey: 'HOME.TITLE', label: '' },
+    { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' }
   ];
 
   constructor(

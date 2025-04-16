@@ -56,5 +56,8 @@
       "BUTTON3": "Project 3"
     }
   },
+  "LINQ": {
+    "TITLE": "Linq-Playground"    
+  },
   "LOGOUT": "Logout"
 }

@@ -40,8 +40,13 @@ export class AppComponent {
   pages = [
     { path: 'home', labelKey: 'HOME.TITLE', label: '' },
     { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' }
-  ];
+  ];  
 
+  private routeTitleMap: { [key: string]: string } = {
+    '/linq-playground': 'LINQ.TITLE',
+    '/problem-solving': 'PROBLEM-SOLVING.TITLE',
+    '': 'HOME.TITLE' 
+  };
   constructor(
     private router: Router,
     private translationService: TranslationService,
@@ -71,8 +76,8 @@ export class AppComponent {
   }
 
   private updatePageTitle() {
-    const url = this.router.url;
-    let titleKey = 'HOME.TITLE';    
+    const url = this.router.url.split('?')[0]; 
+    const titleKey = this.routeTitleMap[url] || 'HOME.TITLE'; 
 
     this.translate.get(titleKey).subscribe((text: string) => {
       this.currentPageTitle = text;

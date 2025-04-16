@@ -1,0 +1,22 @@
+<div class="showcase-container">
+  <h2 class="showcase-title">Problem-Solving Showcase</h2>
+  <p class="showcase-subtitle">Problemas resolvidos e impacto gerado</p>
+
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let item of timelineItems; trackBy: trackByFn">
+      <div class="timeline-year">{{ item.year }}</div>
+      <div class="timeline-content">
+        <h3 class="company-name">{{ item.company }}</h3>
+        <ul class="achievements-list">
+          <li class="achievement" *ngFor="let achievement of item.achievements">
+            <span class="achievement-icon">{{ achievement.icon }}</span>
+            <div>
+              <h4>{{ achievement.title }}</h4>
+              <p class="achievement-desc">{{ achievement.description }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

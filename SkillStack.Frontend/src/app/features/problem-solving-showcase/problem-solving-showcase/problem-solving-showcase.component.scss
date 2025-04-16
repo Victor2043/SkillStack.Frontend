@@ -1,0 +1,96 @@
+.showcase-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+
+  .showcase-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .showcase-subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 50px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #3498db;
+    }
+
+    .timeline-item {
+      margin-bottom: 2.5rem;
+      position: relative;
+
+      .timeline-year {
+        position: absolute;
+        left: -50px;
+        top: 0;
+        background: #3498db;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .timeline-content {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        border-left: 3px solid #3498db;
+
+        .company-name {
+          margin-top: 0;
+          color: #2c3e50;
+          border-bottom: 1px dashed #ecf0f1;
+          padding-bottom: 0.5rem;
+        }
+
+        .achievements-list {
+          list-style: none;
+          padding: 0;
+
+          .achievement {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            align-items: flex-start;
+
+            .achievement-icon {
+              font-size: 1.5rem;
+              margin-top: 0.2rem;
+            }
+
+            h4 {
+              margin: 0 0 0.3rem 0;
+              color: #2980b9;
+            }
+
+            .achievement-desc {
+              margin: 0;
+              color: #7f8c8d;
+              font-size: 0.95rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

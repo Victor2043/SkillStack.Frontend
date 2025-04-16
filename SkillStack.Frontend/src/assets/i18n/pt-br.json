@@ -59,5 +59,38 @@
   "LINQ": {
     "TITLE": "Linq-Playground"
   },
+  "PROBLEM-SOLVING": {
+    "TITLE": "Resolução de Problemas",
+    "TIMELINE": {
+      "XPTO": {
+        "YEAR": "2021",
+        "COMPANY": "XPTO Solutions",
+        "ACHIEVEMENTS": {
+          "SQL": {
+            "TITLE": "Otimizei Consultas SQL",
+            "DESCRIPTION": "Reduzi o tempo de execução de relatórios em 80%"
+          },
+          "CICD": {
+            "TITLE": "Criei Pipelines de CI/CD",
+            "DESCRIPTION": "Automatizei deploys com Azure DevOps, eliminando erros manuais"
+          }
+        }
+      },
+      "ABC": {
+        "YEAR": "2022",
+        "COMPANY": "ABC Tech",
+        "ACHIEVEMENTS": {
+          "JWT": {
+            "TITLE": "Implementei Autenticação JWT",
+            "DESCRIPTION": "Aumentei a segurança das APIs em 300%"
+          },
+          "ANGULAR": {
+            "TITLE": "Migrei para Angular 14",
+            "DESCRIPTION": "Melhorei o desempenho do frontend em 40%"
+          }
+        }
+      }
+    }
+  },
   "LOGOUT": "Sair"
 }

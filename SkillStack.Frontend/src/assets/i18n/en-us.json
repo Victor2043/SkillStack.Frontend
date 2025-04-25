@@ -8,10 +8,10 @@
     },
     "ABOUT": {
       "TITLE": "About Me",
-      "DESCRIPTION": "I’m Victor Alves, a tech enthusiast since childhood, going from computer building and maintenance courses to programming. Today, I’m a developer with solid experience in Python, Angular, and .NET, but always open to learning new technologies. In my free time, I enjoy exercising, playing video games, and card games with friends."
+      "DESCRIPTION": "I'm Victor Alves. A tech enthusiast since childhood, I went from tinkering with computers to writing code. Today, I'm a developer with solid experience in Python, Angular, and .NET, and always eager to learn new technologies. In my free time, I enjoy working out, playing video games, and card games with friends."
     },
     "EXPERIENCES": {
-      "TITLE": "Experiences",
+      "TITLE": "Work Experience",
       "BE3": {
         "COMPANY": "Be3 Health Tech",
         "PERIOD": "March 2020 – July 2021",
@@ -19,29 +19,29 @@
           "TITLE": "Intern",
           "PERIOD": "March 2020 – December 2020",
           "ACTIVITY1": "Developed front-end screens",
-          "ACTIVITY2": "Created some back-end functionalities"
+          "ACTIVITY2": "Created some back-end features"
         },
         "ROLE2": {
           "TITLE": "Programming Technician",
           "PERIOD": "January 2021 – July 2021",
-          "ACTIVITY1": "Managed an API with RPA",
-          "ACTIVITY2": "Created database queries using stored procedures"
+          "ACTIVITY1": "Managed an API integrated with RPA",
+          "ACTIVITY2": "Wrote database queries using stored procedures"
         }
       },
       "VICERI": {
         "COMPANY": "Viceri-Seidor",
         "PERIOD": "July 2021 – Present",
         "ROLE1": {
-          "TITLE": "Junior Developer Analyst",
+          "TITLE": "Junior Software Developer",
           "PERIOD": "July 2021 – April 2022",
           "ACTIVITY1": "Worked as a full-stack developer (front-end, back-end, and database queries)",
           "ACTIVITY2": "Performed code reviews"
         },
         "ROLE2": {
-          "TITLE": "Mid-Level Developer Analyst",
+          "TITLE": "Mid-Level Software Developer",
           "PERIOD": "May 2022 – Present",
-          "ACTIVITY1": "Worked on RPA projects",
-          "ACTIVITY2": "Optimized database queries with stored procedures",
+          "ACTIVITY1": "Worked on projects involving RPA",
+          "ACTIVITY2": "Optimized database queries using stored procedures",
           "ACTIVITY3": "Mentored trainee developers"
         }
       }
@@ -50,44 +50,78 @@
       "TITLE": "Technologies"
     },
     "CTA": {
-      "TEXT": "Want to see a practical project ? Check out",
+      "TEXT": "Want to see a practical project? Check out the projects",
       "BUTTON1": "Project 1",
       "BUTTON2": "Project 2",
       "BUTTON3": "Project 3"
     }
   },
   "LINQ": {
-    "TITLE": "Linq-Playground"    
+    "TITLE": "Linq Playground"
   },
   "PROBLEM-SOLVING": {
-    "TITLE": "Problem-Solving",
-    "SUBTITLE": "Some of My Most Impactful Deliveries",
+    "TITLE": "Highlights",
+    "SUBTITLE": "Some of my most impactful contributions",
     "TIMELINE": {
-      "XPTO": {
-        "YEAR": "2021",
-        "COMPANY": "XPTO Solutions",
+      "MAP_FEATURE": {
+        "YEAR": "2024",
+        "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
-          "SQL": {
-            "TITLE": "Optimized SQL Queries",
-            "DESCRIPTION": "Reduced report execution time by 80%"
+          "KML_UPLOAD": {
+            "TITLE": "KML File Processing and Map Integration",
+            "DESCRIPTION": "I developed a feature in a legacy system to upload and display KML coordinate files directly on the embedded map. The solution was efficient and reusable, and I later adapted it for a newer system to ensure consistency across platforms."
           },
-          "CICD": {
-            "TITLE": "Created CI/CD Pipelines",
-            "DESCRIPTION": "Automated deployments with Azure DevOps, eliminating manual errors"
+          "LEADERSHIP": {
+            "TITLE": "RPA Project Leadership",
+            "DESCRIPTION": "Led a team of 3 developers to build RPA bots that converted spreadsheet data into multiple proprietary formats recognized by the client’s system."
           }
         }
       },
-      "ABC": {
-        "YEAR": "2022",
-        "COMPANY": "ABC Tech",
+      "CI_CD": {
+        "YEAR": "2023",
+        "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
-          "JWT": {
-            "TITLE": "Implemented JWT Authentication",
-            "DESCRIPTION": "Increased API security by 300%"
+          "PIPELINES": {
+            "TITLE": "CI/CD Pipeline Automation",
+            "DESCRIPTION": "Automated deployment processes using Azure DevOps, eliminating manual errors and improving delivery consistency."
           },
-          "ANGULAR": {
-            "TITLE": "Migrated to Angular 14",
-            "DESCRIPTION": "Improved frontend performance by 40%"
+          "TEAM_GROWTH": {
+            "TITLE": "Onboarding and Mentoring of New Developers",
+            "DESCRIPTION": "Actively participated in the hiring process and was responsible for onboarding and mentoring new developers joining the team, ensuring smooth integration and best practices from day one."
+          }
+        }
+      },
+      "SQL_OPTIMIZATION": {
+        "YEAR": "2022",
+        "COMPANY": "Viceri-Seidor",
+        "ACHIEVEMENTS": {
+          "TEMP_TABLES": {
+            "TITLE": "SQL Optimization with Temporary Tables",
+            "DESCRIPTION": "Improved a stored procedure used for client report extraction by implementing temporary tables. The query time was reduced by up to 70%, directly improving the client’s daily operations."
+          },
+          "TEAM_SUPPORT": {
+            "TITLE": "Cross-team Collaboration",
+            "DESCRIPTION": "Provided support to another team to help deliver a system on time. The collaborative effort ensured the project met its deadline and satisfied the client."
+          }
+        }
+      },
+      "RPA_FIX": {
+        "YEAR": "2021",
+        "COMPANY": "Be3 Health Tech",
+        "ACHIEVEMENTS": {
+          "RPA_RESILIENCE": {
+            "TITLE": "Increased RPA Stability",
+            "DESCRIPTION": "Resolved an intermittent issue in an RPA that retrieved medical reports from an iframe. Instead of relying on the DOM, I used authorized credentials to access the PDF directly via a server request, ensuring reliable data extraction."
+          }
+        }
+      },
+      "LOGO_RATING": {
+        "YEAR": "2020",
+        "COMPANY": "Be3 Health Tech",
+        "ACHIEVEMENTS": {
+          "CUSTOM_FEEDBACK": {
+            "TITLE": "Custom Visual Rating System",
+            "DESCRIPTION": "As an intern, I was tasked with creating a unique post-consultation rating component using the company logo instead of stars. I implemented this using SCSS conditionals to swap between grayscale and colored logos on hover, enhancing the visual experience for patients."
           }
         }
       }

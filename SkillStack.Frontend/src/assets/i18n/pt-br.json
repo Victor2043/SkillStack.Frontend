@@ -8,7 +8,7 @@
     },
     "ABOUT": {
       "TITLE": "Sobre Mim",
-      "DESCRIPTION": "Sou Victor Alves, Entusiasta de tecnologia desde criança, fui de cursinhos de montagem de computador até a programação. . Hoje, sou desenvolvedor com uma experiência sólida em Python, Angular e .NET, mas sempre aberto a aprender novas tecnologias.Nos momentos livres, gosto de fazer exercícios, jogar videogames e partidas de baralho com amigos."
+      "DESCRIPTION": "Sou Victor Alves. Entusiasta de tecnologia desde criança, comecei em cursos de montagem de computadores e me apaixonei pela programação. Hoje, sou desenvolvedor com experiência sólida em Python, Angular e .NET, e estou sempre aberto a aprender novas tecnologias. Nos momentos livres, gosto de fazer exercícios, jogar videogames e partidas de baralho com amigos."
     },
     "EXPERIENCES": {
       "TITLE": "Experiências",
@@ -19,22 +19,22 @@
           "TITLE": "Estagiário",
           "PERIOD": "Março 2020 – Dezembro 2020",
           "ACTIVITY1": "Desenvolvi telas no front-end",
-          "ACTIVITY2": "Criei algumas funcionalidades no back-end"
+          "ACTIVITY2": "Implementei funcionalidades no back-end"
         },
         "ROLE2": {
           "TITLE": "Técnico em Programação",
           "PERIOD": "Janeiro 2021 – Julho 2021",
           "ACTIVITY1": "Gerenciei uma API com RPA",
-          "ACTIVITY2": "Criei consultas no banco usando stored procedures"
+          "ACTIVITY2": "Criei consultas no banco utilizando stored procedures"
         }
       },
       "VICERI": {
         "COMPANY": "Viceri-Seidor",
         "PERIOD": "Julho 2021 – Atual",
         "ROLE1": {
-          "TITLE": "Analista Desenvolvedor Junior",
+          "TITLE": "Analista Desenvolvedor Júnior",
           "PERIOD": "Julho 2021 – Abril 2022",
-          "ACTIVITY1": "Atuei como desenvolvedor full-stack (front-end, back-end e consultas no banco)",
+          "ACTIVITY1": "Atuei como desenvolvedor full-stack (front-end, back-end e banco de dados)",
           "ACTIVITY2": "Realizei revisões de código"
         },
         "ROLE2": {
@@ -50,44 +50,78 @@
       "TITLE": "Tecnologias"
     },
     "CTA": {
-      "TEXT": "Quer ver um projeto prático? Confira os projetos",
-      "BUTTON1": "Project 1",
-      "BUTTON2": "Project 2",
-      "BUTTON3": "Project 3"
+      "TEXT": "Quer ver um projeto prático? Confira os projetos abaixo",
+      "BUTTON1": "Projeto 1",
+      "BUTTON2": "Projeto 2",
+      "BUTTON3": "Projeto 3"
     }
   },
   "LINQ": {
-    "TITLE": "Linq-Playground"
+    "TITLE": "Linq Playground"
   },
   "PROBLEM-SOLVING": {
-    "TITLE": "Resolução de Problemas",
+    "TITLE": "Destaques",
     "SUBTITLE": "Algumas das minhas entregas de maior impacto",
     "TIMELINE": {
-      "XPTO": {
-        "YEAR": "2021",
-        "COMPANY": "XPTO Solutions",
+      "MAP_FEATURE": {
+        "YEAR": "2024",
+        "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
-          "SQL": {
-            "TITLE": "Otimizei Consultas SQL",
-            "DESCRIPTION": "Reduzi o tempo de execução de relatórios em 80%"
+          "KML_UPLOAD": {
+            "TITLE": "Integração de arquivos de coordenadas ao mapa",
+            "DESCRIPTION": "Desenvolvi em um sistema legado a funcionalidade de upload e leitura de arquivos KML, permitindo a visualização no mapa integrado. Posteriormente, adaptei essa funcionalidade para um sistema mais recente, garantindo reuso de código e consistência."
           },
-          "CICD": {
-            "TITLE": "Criei Pipelines de CI/CD",
-            "DESCRIPTION": "Automatizei deploys com Azure DevOps, eliminando erros manuais"
+          "LEADERSHIP": {
+            "TITLE": "Liderança em projeto de RPA",
+            "DESCRIPTION": "Liderei uma equipe de 3 desenvolvedores na criação de robôs RPA responsáveis por converter dados de planilhas para múltiplos formatos de arquivos proprietários reconhecidos pelo sistema do cliente."
           }
         }
       },
-      "ABC": {
-        "YEAR": "2022",
-        "COMPANY": "ABC Tech",
+      "CI_CD": {
+        "YEAR": "2023",
+        "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
-          "JWT": {
-            "TITLE": "Implementei Autenticação JWT",
-            "DESCRIPTION": "Aumentei a segurança das APIs em 300%"
+          "PIPELINES": {
+            "TITLE": "Automação de deploy com CI/CD",
+            "DESCRIPTION": "Automatizei o processo de deploy utilizando Azure DevOps, reduzindo falhas manuais e aumentando a eficiência do time."
           },
-          "ANGULAR": {
-            "TITLE": "Migrei para Angular 14",
-            "DESCRIPTION": "Melhorei o desempenho do frontend em 40%"
+          "TEAM_GROWTH": {
+            "TITLE": "Treinamento e Seleção de Novos Desenvolvedores",
+            "DESCRIPTION": "Participei ativamente do processo seletivo e fui responsável por treinar novos desenvolvedores que estavam ingressando na equipe, promovendo integração e boas práticas desde o início."
+          }
+        }
+      },
+      "SQL_OPTIMIZATION": {
+        "YEAR": "2022",
+        "COMPANY": "Viceri-Seidor",
+        "ACHIEVEMENTS": {
+          "TEMP_TABLES": {
+            "TITLE": "Melhoria de performance com tabelas temporárias",
+            "DESCRIPTION": "Otimizei uma stored procedure utilizada para gerar relatórios. Com o uso de tabelas temporárias, reduzi o tempo de execução em até 70%, impactando positivamente a rotina de extrações do cliente."
+          },
+          "TEAM_SUPPORT": {
+            "TITLE": "Colaboração entre times",
+            "DESCRIPTION": "Ofereci suporte a outro time da empresa para garantir a entrega de um sistema dentro do prazo. O esforço colaborativo resultou no cumprimento do cronograma e satisfação do cliente."
+          }
+        }
+      },
+      "RPA_FIX": {
+        "YEAR": "2021",
+        "COMPANY": "Be3 Health Tech",
+        "ACHIEVEMENTS": {
+          "RPA_RESILIENCE": {
+            "TITLE": "Tornei automação mais estável",
+            "DESCRIPTION": "Corrigi falhas intermitentes em um RPA que buscava laudos via iframe. Passei a buscar o PDF diretamente via requisição autenticada no servidor, tornando a automação confiável mesmo com variações no DOM."
+          }
+        }
+      },
+      "LOGO_RATING": {
+        "YEAR": "2020",
+        "COMPANY": "Be3 Health Tech",
+        "ACHIEVEMENTS": {
+          "CUSTOM_FEEDBACK": {
+            "TITLE": "Sistema de avaliação com logo personalizada",
+            "DESCRIPTION": "Criei, como estagiário, um sistema de avaliação pós-consulta com logos da empresa no lugar de estrelas. Usei SCSS para trocar a logo de preto e branco para colorida ao passar o mouse, proporcionando uma experiência visual diferenciada."
           }
         }
       }

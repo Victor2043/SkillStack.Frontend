@@ -27,34 +27,72 @@ interface TimelineItem {
 export class ProblemSolvingShowcaseComponent {
   timelineItems: TimelineItem[] = [
     {
-      year: 'PROBLEM-SOLVING.TIMELINE.XPTO.YEAR',
-      company: 'PROBLEM-SOLVING.TIMELINE.XPTO.COMPANY',
+      year: 'PROBLEM-SOLVING.TIMELINE.MAP_FEATURE.YEAR',
+      company: 'PROBLEM-SOLVING.TIMELINE.MAP_FEATURE.COMPANY',
       achievements: [
         {
-          icon: '⚡',
-          title: 'PROBLEM-SOLVING.TIMELINE.XPTO.ACHIEVEMENTS.SQL.TITLE',
-          description: 'PROBLEM-SOLVING.TIMELINE.XPTO.ACHIEVEMENTS.SQL.DESCRIPTION'
+          icon: '🗺️',
+          title: 'PROBLEM-SOLVING.TIMELINE.MAP_FEATURE.ACHIEVEMENTS.KML_UPLOAD.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.MAP_FEATURE.ACHIEVEMENTS.KML_UPLOAD.DESCRIPTION'
         },
         {
-          icon: '🔧',
-          title: 'PROBLEM-SOLVING.TIMELINE.XPTO.ACHIEVEMENTS.CICD.TITLE',
-          description: 'PROBLEM-SOLVING.TIMELINE.XPTO.ACHIEVEMENTS.CICD.DESCRIPTION'
+          icon: '👥',
+          title: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.LEADERSHIP.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.LEADERSHIP.DESCRIPTION'
         }
       ]
     },
     {
-      year: 'PROBLEM-SOLVING.TIMELINE.ABC.YEAR',
-      company: 'PROBLEM-SOLVING.TIMELINE.ABC.COMPANY',
+      year: 'PROBLEM-SOLVING.TIMELINE.CI_CD.YEAR',
+      company: 'PROBLEM-SOLVING.TIMELINE.CI_CD.COMPANY',
+      achievements: [
+        {
+          icon: '🔧',
+          title: 'PROBLEM-SOLVING.TIMELINE.CI_CD.ACHIEVEMENTS.PIPELINES.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.CI_CD.ACHIEVEMENTS.PIPELINES.DESCRIPTION'
+        },        
+        {
+          icon: '🧑‍🏫',
+          title: 'PROBLEM-SOLVING.TIMELINE.CI_CD.ACHIEVEMENTS.TEAM_GROWTH.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.CI_CD.ACHIEVEMENTS.TEAM_GROWTH.DESCRIPTION'
+        }
+      ]
+    },
+    {
+      year: 'PROBLEM-SOLVING.TIMELINE.SQL_OPTIMIZATION.YEAR',
+      company: 'PROBLEM-SOLVING.TIMELINE.SQL_OPTIMIZATION.COMPANY',
+      achievements: [
+        {
+          icon: '⚡',
+          title: 'PROBLEM-SOLVING.TIMELINE.SQL_OPTIMIZATION.ACHIEVEMENTS.TEMP_TABLES.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.SQL_OPTIMIZATION.ACHIEVEMENTS.TEMP_TABLES.DESCRIPTION'
+        },
+        {
+          icon: '🤝',
+          title: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.TEAM_SUPPORT.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.TEAM_SUPPORT.DESCRIPTION'
+        }
+      ]
+    },
+    {
+      year: 'PROBLEM-SOLVING.TIMELINE.RPA_FIX.YEAR',
+      company: 'PROBLEM-SOLVING.TIMELINE.RPA_FIX.COMPANY',
       achievements: [
         {
           icon: '🛡️',
-          title: 'PROBLEM-SOLVING.TIMELINE.ABC.ACHIEVEMENTS.JWT.TITLE',
-          description: 'PROBLEM-SOLVING.TIMELINE.ABC.ACHIEVEMENTS.JWT.DESCRIPTION'
-        },
+          title: 'PROBLEM-SOLVING.TIMELINE.RPA_FIX.ACHIEVEMENTS.RPA_RESILIENCE.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.RPA_FIX.ACHIEVEMENTS.RPA_RESILIENCE.DESCRIPTION'
+        }
+      ]
+    },
+    {
+      year: 'PROBLEM-SOLVING.TIMELINE.LOGO_RATING.YEAR',
+      company: 'PROBLEM-SOLVING.TIMELINE.LOGO_RATING.COMPANY',
+      achievements: [
         {
-          icon: '🚀',
-          title: 'PROBLEM-SOLVING.TIMELINE.ABC.ACHIEVEMENTS.ANGULAR.TITLE',
-          description: 'PROBLEM-SOLVING.TIMELINE.ABC.ACHIEVEMENTS.ANGULAR.DESCRIPTION'
+          icon: '✨',
+          title: 'PROBLEM-SOLVING.TIMELINE.LOGO_RATING.ACHIEVEMENTS.CUSTOM_FEEDBACK.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.LOGO_RATING.ACHIEVEMENTS.CUSTOM_FEEDBACK.DESCRIPTION'
         }
       ]
     }

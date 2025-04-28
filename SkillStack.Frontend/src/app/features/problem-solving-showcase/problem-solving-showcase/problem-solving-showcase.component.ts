@@ -37,8 +37,8 @@ export class ProblemSolvingShowcaseComponent {
         },
         {
           icon: '👥',
-          title: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.LEADERSHIP.TITLE',
-          description: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.LEADERSHIP.DESCRIPTION'
+          title: 'PROBLEM-SOLVING.TIMELINE.LEADERSHIP.ACHIEVEMENTS.TEAM_LEAD.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.LEADERSHIP.ACHIEVEMENTS.TEAM_LEAD.DESCRIPTION'
         }
       ]
     },
@@ -69,8 +69,8 @@ export class ProblemSolvingShowcaseComponent {
         },
         {
           icon: '🤝',
-          title: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.TEAM_SUPPORT.TITLE',
-          description: 'PROBLEM-SOLVING.TIMELINE.VICERI.ACHIEVEMENTS.TEAM_SUPPORT.DESCRIPTION'
+          title: 'PROBLEM-SOLVING.TIMELINE.TEAM_SUPPORT.ACHIEVEMENTS.CROSS_TEAM_HELP.TITLE',
+          description: 'PROBLEM-SOLVING.TIMELINE.TEAM_SUPPORT.ACHIEVEMENTS.CROSS_TEAM_HELP.DESCRIPTION'
         }
       ]
     },

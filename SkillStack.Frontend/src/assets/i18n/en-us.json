@@ -67,19 +67,25 @@
   },
   "PROBLEM-SOLVING": {
     "TITLE": "Highlights",
-    "SUBTITLE": "Some of my most impactful contributions",
+    "SUBTITLE": "Some of my most impactful deliveries",
     "TIMELINE": {
       "MAP_FEATURE": {
         "YEAR": "2024",
         "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
           "KML_UPLOAD": {
-            "TITLE": "KML File Processing and Map Integration",
-            "DESCRIPTION": "I developed a feature in a legacy system to upload and display KML coordinate files directly on the embedded map. The solution was efficient and reusable, and I later adapted it for a newer system to ensure consistency across platforms."
-          },
-          "LEADERSHIP": {
-            "TITLE": "RPA Project Leadership",
-            "DESCRIPTION": "Led a team of 3 developers to build RPA bots that converted spreadsheet data into multiple proprietary formats recognized by the client’s system."
+            "TITLE": "Integration of coordinates files into the map",
+            "DESCRIPTION": "I developed a feature to upload and read KML files in a legacy system, enabling visualization on an integrated map. Later, I adapted this feature for a newer system, ensuring code reuse and consistency."
+          }
+        }
+      },
+      "LEADERSHIP": {
+        "YEAR": "2024",
+        "COMPANY": "Viceri-Seidor",
+        "ACHIEVEMENTS": {
+          "TEAM_LEAD": {
+            "TITLE": "Leadership in RPA project",
+            "DESCRIPTION": "I led a team of 3 developers to create RPA bots responsible for converting spreadsheet data into multiple proprietary file formats recognized by the client's system."
           }
         }
       },
@@ -88,12 +94,12 @@
         "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
           "PIPELINES": {
-            "TITLE": "CI/CD Pipeline Automation",
-            "DESCRIPTION": "Automated deployment processes using Azure DevOps, eliminating manual errors and improving delivery consistency."
+            "TITLE": "CI/CD deploy automation",
+            "DESCRIPTION": "I automated the deploy process using Azure DevOps, reducing manual failures and increasing the team's efficiency."
           },
           "TEAM_GROWTH": {
-            "TITLE": "Onboarding and Mentoring of New Developers",
-            "DESCRIPTION": "Actively participated in the hiring process and was responsible for onboarding and mentoring new developers joining the team, ensuring smooth integration and best practices from day one."
+            "TITLE": "Training and Onboarding New Developers",
+            "DESCRIPTION": "I actively participated in the selection process and was responsible for training new developers joining the team, fostering integration and good practices from the beginning."
           }
         }
       },
@@ -102,12 +108,18 @@
         "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
           "TEMP_TABLES": {
-            "TITLE": "SQL Optimization with Temporary Tables",
-            "DESCRIPTION": "Improved a stored procedure used for client report extraction by implementing temporary tables. The query time was reduced by up to 70%, directly improving the client’s daily operations."
-          },
-          "TEAM_SUPPORT": {
-            "TITLE": "Cross-team Collaboration",
-            "DESCRIPTION": "Provided support to another team to help deliver a system on time. The collaborative effort ensured the project met its deadline and satisfied the client."
+            "TITLE": "Performance improvement with temporary tables",
+            "DESCRIPTION": "I optimized a stored procedure used to generate reports. By using temporary tables, I reduced execution time by up to 70%, positively impacting the client's extraction routine."
+          }
+        }
+      },
+      "TEAM_SUPPORT": {
+        "YEAR": "2022",
+        "COMPANY": "Viceri-Seidor",
+        "ACHIEVEMENTS": {
+          "CROSS_TEAM_HELP": {
+            "TITLE": "Cross-team support",
+            "DESCRIPTION": "I supported another team to ensure the delivery of a system on time. Our collaborative effort led to meeting the timeline and satisfying the client."
           }
         }
       },
@@ -116,8 +128,8 @@
         "COMPANY": "Be3 Health Tech",
         "ACHIEVEMENTS": {
           "RPA_RESILIENCE": {
-            "TITLE": "Increased RPA Stability",
-            "DESCRIPTION": "Resolved an intermittent issue in an RPA that retrieved medical reports from an iframe. Instead of relying on the DOM, I used authorized credentials to access the PDF directly via a server request, ensuring reliable data extraction."
+            "TITLE": "Made automation more stable",
+            "DESCRIPTION": "I fixed intermittent failures in an RPA that fetched reports via iframe. I started fetching the PDF directly via authenticated requests to the server, making the automation reliable even with variations in the DOM."
           }
         }
       },
@@ -126,8 +138,8 @@
         "COMPANY": "Be3 Health Tech",
         "ACHIEVEMENTS": {
           "CUSTOM_FEEDBACK": {
-            "TITLE": "Custom Visual Rating System",
-            "DESCRIPTION": "As an intern, I was tasked with creating a unique post-consultation rating component using the company logo instead of stars. I implemented this using SCSS conditionals to swap between grayscale and colored logos on hover, enhancing the visual experience for patients."
+            "TITLE": "Custom logo feedback system",
+            "DESCRIPTION": "As an intern, I created a post-consultation rating system with company logos instead of stars. I used SCSS to change the logo from black and white to color on hover, providing a unique visual experience."
           }
         }
       }

@@ -75,9 +75,15 @@
         "ACHIEVEMENTS": {
           "KML_UPLOAD": {
             "TITLE": "Integração de arquivos de coordenadas ao mapa",
-            "DESCRIPTION": "Desenvolvi em um sistema legado a funcionalidade de upload e leitura de arquivos KML, permitindo a visualização no mapa integrado. Posteriormente, adaptei essa funcionalidade para um sistema mais recente, garantindo reuso de código e consistência."
-          },
-          "LEADERSHIP": {
+            "DESCRIPTION": "Desenvolvi a funcionalidade de upload e leitura de arquivos KML em um sistema legado, permitindo a visualização no mapa integrado. Posteriormente, adaptei essa funcionalidade para um sistema mais recente, garantindo reuso de código e consistência."
+          }
+        }
+      },
+      "LEADERSHIP": {
+        "YEAR": "2024",
+        "COMPANY": "Viceri-Seidor",
+        "ACHIEVEMENTS": {
+          "TEAM_LEAD": {
             "TITLE": "Liderança em projeto de RPA",
             "DESCRIPTION": "Liderei uma equipe de 3 desenvolvedores na criação de robôs RPA responsáveis por converter dados de planilhas para múltiplos formatos de arquivos proprietários reconhecidos pelo sistema do cliente."
           }
@@ -92,8 +98,8 @@
             "DESCRIPTION": "Automatizei o processo de deploy utilizando Azure DevOps, reduzindo falhas manuais e aumentando a eficiência do time."
           },
           "TEAM_GROWTH": {
-            "TITLE": "Treinamento e Seleção de Novos Desenvolvedores",
-            "DESCRIPTION": "Participei ativamente do processo seletivo e fui responsável por treinar novos desenvolvedores que estavam ingressando na equipe, promovendo integração e boas práticas desde o início."
+            "TITLE": "Treinamento e integração de novos desenvolvedores",
+            "DESCRIPTION": "Participei ativamente do processo seletivo e fui responsável por treinar novos desenvolvedores que ingressaram na equipe, promovendo integração e boas práticas desde o início."
           }
         }
       },
@@ -104,8 +110,14 @@
           "TEMP_TABLES": {
             "TITLE": "Melhoria de performance com tabelas temporárias",
             "DESCRIPTION": "Otimizei uma stored procedure utilizada para gerar relatórios. Com o uso de tabelas temporárias, reduzi o tempo de execução em até 70%, impactando positivamente a rotina de extrações do cliente."
-          },
-          "TEAM_SUPPORT": {
+          }
+        }
+      },
+      "TEAM_SUPPORT": {
+        "YEAR": "2022",
+        "COMPANY": "Viceri-Seidor",
+        "ACHIEVEMENTS": {
+          "CROSS_TEAM_HELP": {
             "TITLE": "Colaboração entre times",
             "DESCRIPTION": "Ofereci suporte a outro time da empresa para garantir a entrega de um sistema dentro do prazo. O esforço colaborativo resultou no cumprimento do cronograma e satisfação do cliente."
           }

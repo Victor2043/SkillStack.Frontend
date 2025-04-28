@@ -1,0 +1,97 @@
+<section class="technologies-section">
+  <h2>{{ 'TECHNOLOGIES-PAGE.TITLE' | translate }}</h2>
+  <p class="description">{{ 'TECHNOLOGIES-PAGE.DESCRIPTION' | translate }}</p>
+
+  <div class="progress-section">
+    <div class="progress-group">
+      <h3>Overall Focus</h3>
+      <div class="progress-item" *ngFor="let usage of overallUsage">
+        <span class="tech-label">
+          <span class="tech-icon">{{ usage.icon }}</span>
+          {{ usage.name | translate }}
+        </span>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="usage.percentage"></div>
+          <span class="progress-text">{{ usage.percentage.toFixed(1) }}%</span>
+        </div>
+      </div>
+    </div>
+    <div class="progress-group">
+      <h3>{{ 'TECHNOLOGIES-PAGE.BACKEND' | translate }}</h3>
+      <div class="progress-item" *ngFor="let tech of backendTechUsage">
+        <span class="tech-label">
+          <span class="tech-icon">{{ tech.icon }}</span>
+          {{ tech.name }}
+        </span>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="tech.percentage"></div>
+          <span class="progress-text">{{ tech.percentage.toFixed(1) }}%</span>
+        </div>
+      </div>
+    </div>
+    <div class="progress-group">
+      <h3>{{ 'TECHNOLOGIES-PAGE.FRONTEND' | translate }}</h3>
+      <div class="progress-item" *ngFor="let tech of frontendTechUsage">
+        <span class="tech-label">
+          <span class="tech-icon">{{ tech.icon }}</span>
+          {{ tech.name }}
+        </span>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width.%]="tech.percentage"></div>
+          <span class="progress-text">{{ tech.percentage.toFixed(1) }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gráficos de Pizza -->
+  <div class="charts-container">
+    <div class="chart">
+      <h3>{{ 'TECHNOLOGIES-PAGE.BACKEND' | translate }}</h3>
+      <canvas
+        baseChart
+        [data]="backendPieChartData"
+        [options]="pieChartOptions"
+        [type]="pieChartType"
+      ></canvas>
+    </div>
+    <div class="chart">
+      <h3>{{ 'TECHNOLOGIES-PAGE.FRONTEND' | translate }}</h3>
+      <canvas
+        baseChart
+        [data]="frontendPieChartData"
+        [options]="pieChartOptions"
+        [type]="pieChartType"
+      ></canvas>
+    </div>
+  </div>
+
+  <!-- Barras de Progresso -->
+  
+
+  <!-- Timeline Visual -->
+  <div class="timeline-section">
+    <h3>Timeline</h3>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let period of techPeriods">
+        <div class="timeline-period">{{ period.period }}</div>
+        <div class="timeline-content">
+          <div class="tech-group" *ngIf="period.backend.length">
+            <h4>{{ 'TECHNOLOGIES-PAGE.BACKEND' | translate }}</h4>
+            <span class="tech-tag" *ngFor="let tech of period.backend">
+              <span class="tech-icon">{{ getTechIcon(tech) }}</span>
+              {{ tech }}
+            </span>
+          </div>
+          <div class="tech-group" *ngIf="period.frontend.length">
+            <h4>{{ 'TECHNOLOGIES-PAGE.FRONTEND' | translate }}</h4>
+            <span class="tech-tag" *ngFor="let tech of period.frontend">
+              <span class="tech-icon">{{ getTechIcon(tech) }}</span>
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,212 @@
+.technologies-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #3f51b5;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    .chart {
+      flex: 1 1 300px;
+      max-width: 400px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+    }
+  }
+
+  .progress-section {
+    margin-bottom: 60px;
+
+    .progress-group {
+      margin-bottom: 40px;
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .progress-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        gap: 15px;
+
+        .tech-label {
+          flex: 0 0 200px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .tech-icon {
+            font-size: 1.2rem;
+          }
+        }
+
+        .progress-bar {
+          flex: 1;
+          background: #f0f0f0;
+          border-radius: 5px;
+          height: 20px;
+          position: relative;
+          overflow: hidden;
+
+          .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #42A5F5, #66BB6A);
+            transition: width 0.5s ease-in-out;
+          }
+
+          .progress-text {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .timeline-section {
+    h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #3f51b5;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 80px; /* Aumentado para evitar sobreposição */
+        display: flex;
+        align-items: flex-start; /* Alinhar no topo */
+        justify-content: flex-end;
+        min-height: 120px; /* Altura mínima para evitar colisões */
+
+        .timeline-period {
+          position: absolute;
+          left: 50%;
+          top: 0; /* Fixado no topo do item */
+          width: 120px;
+          text-align: center;
+          background: #3f51b5;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 15px;
+          transform: translateX(-50%);
+          z-index: 1;
+          font-size: 0.9rem;
+        }
+
+        .timeline-content {
+          width: 45%;
+          padding: 15px;
+          background: #fff;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          margin-top: 40px; /* Espaço para o timeline-period */
+          position: relative;
+
+          .tech-group {
+            margin-bottom: 10px;
+
+            h4 {
+              font-size: 1rem;
+              margin-bottom: 5px;
+              color: #666;
+            }
+
+            .tech-tag {
+              display: inline-flex;
+              align-items: center;
+              gap: 5px;
+              background: #e0e0e0;
+              padding: 5px 10px;
+              border-radius: 15px;
+              margin-right: 5px;
+              margin-bottom: 5px;
+              font-size: 0.9rem;
+
+              .tech-icon {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          justify-content: flex-start;
+
+          .timeline-content {
+            margin-left: 20px;
+            margin-right: 0;
+          }
+        }
+
+        /* Círculo de conexão na linha da timeline */
+        &:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 10px; /* Alinhado com o timeline-period */
+          width: 16px;
+          height: 16px;
+          background: #3f51b5;
+          border-radius: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

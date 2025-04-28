@@ -6,6 +6,7 @@ import { RegisterUserComponent } from './auth/register-user/register-user.compon
 import { ActivateUserComponent } from './auth/activate-user/activate-user.component';
 import { LinqPlaygroundComponent } from './features/linq-playground/linq-playground/linq-playground.component';
 import { ProblemSolvingShowcaseComponent } from './features/problem-solving-showcase/problem-solving-showcase/problem-solving-showcase.component';
+import { TechnologiesComponent } from './features/technologies/technologies.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'activate', component: ActivateUserComponent },
   { path: 'linq-playground', component: LinqPlaygroundComponent, canActivate: [AuthGuard] },  
   { path: 'problem-solving-showcase', component: ProblemSolvingShowcaseComponent, canActivate: [AuthGuard] },
+  { path: 'technologies', component: TechnologiesComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];

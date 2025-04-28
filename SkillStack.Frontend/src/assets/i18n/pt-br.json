@@ -56,6 +56,12 @@
       "BUTTON3": "Projeto 3"
     }
   },
+  "TECHNOLOGIES-PAGE": {
+    "TITLE": "Linha do Tempo de Tecnologias",
+    "DESCRIPTION": "Aqui estão algumas das tecnologias que usei ao longo do tempo.",
+    "BACKEND": "Tecnologias Backend",
+    "FRONTEND": "Tecnologias Frontend"
+  },
   "LINQ": {
     "TITLE": "Linq Playground"
   },

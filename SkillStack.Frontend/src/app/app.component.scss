@@ -1,13 +1,19 @@
-.spacer {
-  flex: 1 1 auto; 
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-mat-toolbar {
+.toolbar-left,
+.toolbar-right {
   display: flex;
   align-items: center;
 }
 
-.menu-container {
+.toolbar-center {
   display: flex;
-  gap: 10px; 
+  gap: 10px;
+  justify-content: center;
+  flex: 1;
 }

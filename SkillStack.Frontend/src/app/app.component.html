@@ -1,22 +1,56 @@
 <mat-toolbar color="primary" *ngIf="showToolbar">
-  <span>{{ currentPageTitle }}</span>
-
-  <span class="spacer"></span>
-
-  <div class="menu-container">
-    <button mat-button *ngFor="let page of pages" (click)="navigateTo(page.path)">
-      {{ page.label }}
-    </button>
+  <div class="toolbar-left">
+    <span>{{ currentPageTitle }}</span>
   </div>
 
-  <span class="spacer"></span>
+  <div class="toolbar-center" *ngIf="!isMobile">
+    <ng-container *ngFor="let page of pages">
+      <button mat-button *ngIf="page.path !== 'linq-playground'" (click)="navigateTo(page.path)">
+        {{ page.label }}
+      </button>
+    </ng-container>
 
-  <button mat-button (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
-  <button mat-button (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
+    <button mat-button [matMenuTriggerFor]="devMenu">
+      {{ developerMenuLabel }}
+    </button>
+    <mat-menu #devMenu="matMenu">
+      <button mat-menu-item (click)="navigateTo('linq-playground')">
+        {{ getPageLabel('linq-playground') }}
+      </button>
+    </mat-menu>
+  </div>
 
-  <button mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
-    <mat-icon>logout</mat-icon>
-  </button>
+  <div class="toolbar-right">
+    <ng-container *ngIf="!isMobile">
+      <button mat-button (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
+      <button mat-button (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
+      <button mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </ng-container>
+
+    <!-- Mobile menu -->
+    <ng-container *ngIf="isMobile">
+      <button mat-icon-button [matMenuTriggerFor]="mobileMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #mobileMenu="matMenu">
+        <ng-container *ngFor="let page of pages">
+          <button mat-menu-item *ngIf="page.path !== 'linq-playground'" (click)="navigateTo(page.path)">
+            {{ page.label }}
+          </button>
+        </ng-container>
+        <button mat-menu-item (click)="navigateTo('linq-playground')">
+          {{ getPageLabel('linq-playground') }}
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
+        <button mat-menu-item (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon> {{ translatedLogout }}
+        </button>
+      </mat-menu>
+    </ng-container>
+  </div>
 </mat-toolbar>
-
 <router-outlet></router-outlet>

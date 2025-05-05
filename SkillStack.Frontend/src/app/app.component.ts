@@ -9,6 +9,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { AuthService } from './services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
+import { MatMenuModule } from '@angular/material/menu';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +23,9 @@ import { filter } from 'rxjs/operators';
     MatButtonModule,
     MatIconModule,
     TranslateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatMenuModule,
+    MatDividerModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -31,6 +36,9 @@ export class AppComponent {
   translatedLogout: string = '';
   selectedLanguage: string = '';
   currentPageTitle: string = '';
+  developerMenuLabel: string = '';
+  isMobile = false;
+
 
   languages = [
     { value: 'en-us', label: '🇺🇸 English (US)' },
@@ -54,11 +62,21 @@ export class AppComponent {
     private router: Router,
     private translationService: TranslationService,
     private translate: TranslateService,
-    private authService: AuthService
+    private authService: AuthService,
+    private breakpointObserver: BreakpointObserver
   ) {
     this.translate.get('LOGOUT').subscribe((text: string) => {
       this.translatedLogout = text;
     });
+
+    this.translate.get('MENU.DEVELOPERS').subscribe((text: string) => {
+      this.developerMenuLabel = text;
+    });
+
+    this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
+      this.isMobile = result.matches;
+    });
+    
 
     this.selectedLanguage = this.translationService.getCurrentLanguage();
 
@@ -112,6 +130,11 @@ export class AppComponent {
     this.translate.get('HOME.LOGOUT').subscribe((text: string) => {
       this.translatedLogout = text;
     });
+
+    this.translate.get('MENU.DEVELOPERS').subscribe((text: string) => {
+      this.developerMenuLabel = text;
+    });
+    
     this.updatePageTitle();
     this.updatePageLabels(); 
   }
@@ -119,4 +142,10 @@ export class AppComponent {
   navigateTo(path: string) {
     this.router.navigate([path]);
   }
+
+  getPageLabel(path: string): string {
+    const page = this.pages.find(p => p.path === path);
+    return page ? page.label : '';
+  }
+  
 }

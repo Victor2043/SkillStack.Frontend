@@ -53,10 +53,9 @@
       "TITLE": "Tecnologias"
     },
     "CTA": {
-      "TEXT": "Quer ver um projeto prático? Confira os projetos abaixo",
-      "BUTTON1": "Projeto 1",
-      "BUTTON2": "Projeto 2",
-      "BUTTON3": "Projeto 3"
+      "TEXT": "Saiba mais sobre mim aqui",
+      "BUTTON1": "Destaques",
+      "BUTTON2": "Tecnologias"
     }
   },
   "TECHNOLOGIES-PAGE": {

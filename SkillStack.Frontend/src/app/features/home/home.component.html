@@ -42,13 +42,11 @@
 
 <section class="cta">
   <p>{{ 'HOME.CTA.TEXT' | translate }}</p>
-  <button mat-raised-button color="primary" (click)="navigateToProject('project')">
+  <button mat-raised-button color="accent" [routerLink]="['/problem-solving-showcase']">
     {{ 'HOME.CTA.BUTTON1' | translate }}
   </button>
-  <button mat-raised-button color="accent" (click)="navigateToProject('project')">
+  <button mat-raised-button color="warn" [routerLink]="['/technologies']">
     {{ 'HOME.CTA.BUTTON2' | translate }}
   </button>
-  <button mat-raised-button color="warn" (click)="navigateToProject('project')">
-    {{ 'HOME.CTA.BUTTON3' | translate }}
-  </button>
+  
 </section>

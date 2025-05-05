@@ -33,15 +33,15 @@ interface OverallUsage {
 export class TechnologiesComponent implements OnInit {
   techPeriods: TechPeriod[] = [
     { period: 'Mar 2020 - Dec 2020', backend: ['.NET Core 3.0'], frontend: ['AngularJS', 'Angular 8'] },
-    { period: 'Jan 2021 - Jun 2021', backend: ['Python 3.8', 'Docker'], frontend: [] },
+    { period: 'Jan 2021 - Jun 2021', backend: ['Python 3.8', 'Docker', 'Linux'], frontend: [] },
     { period: 'Jul 2021 - Dec 2021', backend: ['.NET Core 3.0'], frontend: ['Angular 8'] },
     { period: 'Jan 2022 - Jul 2022', backend: ['.NET 4.5'], frontend: ['HTML', 'CSS', 'jQuery'] },
-    { period: 'Jul 2022 - Dec 2022', backend: ['.NET Core 3.0'], frontend: ['Angular 8'] },
+    { period: 'Jul 2022 - Dec 2022', backend: ['.NET Core 3.0', 'Amazon SQS'], frontend: ['Angular 8'] },
     { period: 'Jan 2023 - May 2023', backend: ['.NET 4.0', '.NET 6'], frontend: ['HTML', 'CSS', 'jQuery', 'Angular 8'] },
-    { period: 'May 2023 - Dec 2023', backend: ['.NET 6', 'Docker'], frontend: [] },
+    { period: 'May 2023 - Dec 2023', backend: ['.NET 6', 'Docker', 'Linux'], frontend: [] },
     { period: 'Jan 2024 - Jul 2024', backend: ['.NET 4.0'], frontend: ['HTML', 'CSS', 'jQuery'] },
-    { period: 'Jul 2024 - Dec 2024', backend: ['.NET 8', 'Docker', 'Lambda Functions (Python 3.12)'], frontend: [] },
-    { period: 'Jan 2025 - Mar 2025', backend: ['.NET 8', '.NET 4.0', 'Docker', 'Lambda Functions (Python 3.12)'], frontend: [] }
+    { period: 'Jul 2024 - Dec 2024', backend: ['.NET 8', 'Docker', 'Lambda Functions (Python 3.12)', 'Linux'], frontend: [] },
+    { period: 'Jan 2025 - Mar 2025', backend: ['.NET 8', '.NET 4.0', 'Docker', 'Linux','Lambda Functions (Python 3.12)'], frontend: [] }
   ];
 
   // Dados para os gráficos de pizza
@@ -84,7 +84,9 @@ export class TechnologiesComponent implements OnInit {
     '.NET 6': '⚙️',
     '.NET 8': '⚙️',
     'Lambda Functions (Python 3.12)': 'λ',
-    'Python 3.12': '🐍'
+    'Python 3.12': '🐍',
+    'Linux': '🐧',
+    'Amazon SQS': '📬'
   };
 
   ngOnInit() {

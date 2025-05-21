@@ -61,7 +61,7 @@ export class HomeComponent {
     }
   ];
 
-  technologies = ['Angular', '.NET 8', 'C#', 'TypeScript', 'Python', 'SQL'];
+  technologies = ['Angular', '.NET', 'C#', 'TypeScript', 'Python', 'SQL'];
 
   constructor(private router: Router) {}
 

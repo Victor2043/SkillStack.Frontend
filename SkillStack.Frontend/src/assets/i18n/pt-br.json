@@ -33,7 +33,7 @@
       },
       "VICERI": {
         "COMPANY": "Viceri-Seidor",
-        "PERIOD": "Julho 2021 – Atual",
+        "PERIOD": "Julho 2021 – Março 2025",
         "ROLE1": {
           "TITLE": "Analista Desenvolvedor Júnior",
           "PERIOD": "Julho 2021 – Abril 2022",
@@ -42,7 +42,7 @@
         },
         "ROLE2": {
           "TITLE": "Analista Desenvolvedor Pleno",
-          "PERIOD": "Maio 2022 – Atual",
+          "PERIOD": "Maio 2022 – Março 2025",
           "ACTIVITY1": "Trabalhei em projetos com RPA",
           "ACTIVITY2": "Otimizei consultas no banco com stored procedures",
           "ACTIVITY3": "Orientei desenvolvedores trainees"

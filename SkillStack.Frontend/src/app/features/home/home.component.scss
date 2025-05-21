@@ -16,7 +16,9 @@
   padding: 20px;
   mat-card {
     max-width: 800px;
-    margin: 0 auto;    
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Adicionado para garantir padding interno */
   }
 }
 
@@ -62,6 +64,9 @@
         margin-right: 20px;
         padding: 20px;
         box-shadow: -0.1em -0.1em 1em gray;
+        box-sizing: border-box; /* Adicionado para garantir padding interno */
+        word-wrap: break-word; /* Quebra palavras longas */
+        overflow-wrap: break-word; /* Alternativa moderna */
       }
       &:nth-child(even) {
         justify-content: flex-start;
@@ -107,5 +112,72 @@
   }
   button {
     margin: 0 10px;
+  }
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .hero {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .experiences {
+    .timeline {
+      &:before {
+        left: 20px; /* Mover linha para a esquerda */
+      }
+      .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 40px;
+        .timeline-dot {
+          left: 20px; /* Alinhar pontos com a linha */
+        }
+        .timeline-content {
+          width: 100%;
+          margin: 10px 0 0 0 !important; /* Resetar margens */
+        }
+        &:nth-child(even) {
+          justify-content: flex-start;
+          .timeline-content {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  
+  .cta {
+    button {
+      margin: 10px 0;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 15px;
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  mat-card {
+    padding: 15px !important;
+  }
+  
+  .timeline-content {
+    padding: 15px !important;
   }
 }

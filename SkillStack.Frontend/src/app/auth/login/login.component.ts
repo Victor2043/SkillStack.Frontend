@@ -51,4 +51,29 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+  onGuestLogin(): void {
+    this.isLoading = true;
+    
+    const guestEmail = 'guest@email.com.br';
+    const guestPassword = 'guestpass';
+    
+    this.authService.login(guestEmail, guestPassword).subscribe({
+      next: (response) => {
+        sessionStorage.setItem('token', response.token);
+        
+        sessionStorage.setItem('isGuest', 'true');
+        
+        this.snackBar.open('Logged in as guest', 'Close', { duration: 2000 });
+        this.router.navigate(['/home']);
+      },
+      error: (error) => {
+        this.snackBar.open('Guest login error: ' + (error.error.message || 'Invalid guest credentials'), 'Close', { duration: 3000 });
+        this.isLoading = false;
+      },
+      complete: () => {
+        this.isLoading = false;
+      }
+    });
+  }
 }

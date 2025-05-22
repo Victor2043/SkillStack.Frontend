@@ -14,8 +14,15 @@
         </div>
   
         <div class="actions">
-          <button type="submit" class="btn-login">Sign In</button>
-          <a routerLink="/recuperar-senha" class="forgot-password">Forgot your password?</a>
+          <button type="submit" class="btn-login" [disabled]="isLoading">
+            {{ isLoading ? 'Signing In...' : 'Sign In' }}
+          </button>          
+        </div>
+        <div class="actions">
+          <button type="button" class="btn-login" style="background-color: #f44336;" 
+                  (click)="onGuestLogin()" [disabled]="isLoading">
+            {{ isLoading ? 'Logging In...' : 'Login as Guest' }}
+          </button>
         </div>
       </form>
   

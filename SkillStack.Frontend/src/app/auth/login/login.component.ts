@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent implements OnInit {
   email = '';
   password = '';
+  errorMessage = '';
   isLoading = false;
   
   constructor(
@@ -42,9 +43,20 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('token', response.token);
         this.router.navigate(['/home']);
       },
-      error: (error) => {
-        this.snackBar.open(error.error.message || 'Login error', 'Close', { duration: 3000 });
+      error: (err) => {
         this.isLoading = false;
+    
+        if (err.status === 400 && err.error && err.error.errors) {
+          const validationMessages = Object.values(err.error.errors)
+            .flat()
+            .join(' | ');
+          
+          this.errorMessage = validationMessages;
+        } else {
+          this.errorMessage = err.error?.message || 'Registration failed. Please try again.';
+        }
+    
+        this.snackBar.open(this.errorMessage, 'Close', { duration: 3000 });
       },
       complete: () => {
         this.isLoading = false;

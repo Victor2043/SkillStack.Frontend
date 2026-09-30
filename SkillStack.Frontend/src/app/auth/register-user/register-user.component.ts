@@ -49,11 +49,22 @@ export class RegisterUserComponent {
         this.navigateToLogin();
       },
       error: (err) => {
-        this.errorMessage = err.error?.message || 'Registration failed. Please try again.';
         this.isLoading = false;
+    
+        if (err.status === 400 && err.error && err.error.errors) {
+          // Flatten and join validation messages
+          const validationMessages = Object.values(err.error.errors)
+            .flat()
+            .join(' | ');
+          
+          this.errorMessage = validationMessages;
+        } else {
+          this.errorMessage = err.error?.message || 'Registration failed. Please try again.';
+        }
+    
         this.snackBar.open(this.errorMessage, 'Close', { duration: 3000 });
       }
-    });
+    });    
   }
 
   navigateToLogin() {

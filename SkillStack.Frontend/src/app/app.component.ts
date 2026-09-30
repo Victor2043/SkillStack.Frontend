@@ -69,7 +69,7 @@ export class AppComponent {
       this.translatedLogout = text;
     });
 
-    this.translate.get('MENU.DEVELOPERS').subscribe((text: string) => {
+    this.translate.get('MENU.FEATURES').subscribe((text: string) => {
       this.developerMenuLabel = text;
     });
 
@@ -131,7 +131,7 @@ export class AppComponent {
       this.translatedLogout = text;
     });
 
-    this.translate.get('MENU.DEVELOPERS').subscribe((text: string) => {
+    this.translate.get('MENU.FEATURES').subscribe((text: string) => {
       this.developerMenuLabel = text;
     });
     

@@ -32,16 +32,17 @@ interface OverallUsage {
 })
 export class TechnologiesComponent implements OnInit {
   techPeriods: TechPeriod[] = [
-    { period: 'Mar 2020 - Dec 2020', backend: ['.NET Core 3.0'], frontend: ['AngularJS', 'Angular 8'] },
-    { period: 'Jan 2021 - Jun 2021', backend: ['Python 3.8', 'Docker', 'Linux'], frontend: [] },
-    { period: 'Jul 2021 - Dec 2021', backend: ['.NET Core 3.0'], frontend: ['Angular 8'] },
-    { period: 'Jan 2022 - Jul 2022', backend: ['.NET 4.5'], frontend: ['HTML', 'CSS', 'jQuery'] },
-    { period: 'Jul 2022 - Dec 2022', backend: ['.NET Core 3.0', 'Amazon SQS'], frontend: ['Angular 8'] },
-    { period: 'Jan 2023 - May 2023', backend: ['.NET 4.0', '.NET 6'], frontend: ['HTML', 'CSS', 'jQuery', 'Angular 8'] },
-    { period: 'May 2023 - Dec 2023', backend: ['.NET 6', 'Docker', 'Linux'], frontend: [] },
-    { period: 'Jan 2024 - Jul 2024', backend: ['.NET 4.0'], frontend: ['HTML', 'CSS', 'jQuery'] },
-    { period: 'Jul 2024 - Dec 2024', backend: ['.NET 8', 'Docker', 'Lambda Functions (Python 3.12)', 'Linux'], frontend: [] },
-    { period: 'Jan 2025 - Mar 2025', backend: ['.NET 8', '.NET 4.0', 'Docker', 'Linux','Lambda Functions (Python 3.12)'], frontend: [] }
+    { period: '2026', backend: ['.NET', 'SQL Server', 'Postgres',  'Docker', 'Linux','RabbitMQ', 'Scripts de carga (Python)', 'AWS S3', 'Redis', 'Rancher', 'Kubernetes', 'CI/CD'], frontend: [] },
+    { period: '2025', backend: ['.NET', '.NET 4.0','SQL Server', 'Postgres', 'Docker', 'Linux','AWS Lambda Functions (Python)','RabbitMQ', 'Redis', 'Rancher', 'Kubernetes', 'CI/CD'], frontend: [] },
+    { period: 'Jul 2024 - Dec 2024', backend: ['.NET', 'SQL Server', 'Docker', 'AWS Lambda Functions (Python)', 'Linux','RabbitMQ', 'MongoDB', 'CI/CD'], frontend: ['Angular'] },    
+    { period: 'Jan 2024 - Jul 2024', backend: ['.NET 4.0', 'SQL Server'], frontend: ['HTML', 'CSS', 'jQuery'] },
+    { period: 'May 2023 - Dec 2023', backend: ['.NET', 'Docker', 'Linux', 'Python', 'SQL Server', 'RabbitMQ', 'AWS EC2', 'MongoDB', 'CI/CD'], frontend: [] },
+    { period: 'Jan 2023 - May 2023', backend: ['.NET 4.0', '.NET', 'Python', 'SQL Server'], frontend: ['HTML', 'CSS', 'jQuery', 'Angular'] },
+    { period: 'Jul 2022 - Dec 2022', backend: ['.NET', 'AWS SQS', 'Postgres', 'CI/CD'], frontend: ['Angular'] },
+    { period: 'Jan 2022 - Jul 2022', backend: ['.NET 4.0', 'SQL Server'], frontend: ['HTML', 'CSS', 'jQuery'] },
+    { period: 'Jul 2021 - Dec 2021', backend: ['.NET Core 3.1', 'SQL Server'], frontend: ['Angular'] },
+    { period: 'Jan 2021 - Jun 2021', backend: ['Python', 'Docker', 'Linux', 'AWS EC2'], frontend: [] },
+    { period: 'Mar 2020 - Dec 2020', backend: ['.NET Core 3.1', 'SQL Server'], frontend: ['AngularJS', 'Angular'] }
   ];
 
   // Dados para os gráficos de pizza
@@ -70,24 +71,39 @@ export class TechnologiesComponent implements OnInit {
   ];
 
   // Ícones para as tecnologias (para a timeline visual)
-  private techIcons: { [key: string]: string } = {
-    '.NET Core 3.0': '⚙️',
-    'Python 3.8': '🐍',
-    'Docker': '🐳',
-    'AngularJS': '🅰️',
-    'Angular 8': '🅰️',
-    '.NET 4.5': '⚙️',
-    'HTML': '🌐',
+private techIcons: { [key: string]: string } = {
+    // Linguagens & Frameworks Backend
+    '.NET 4.0': '🔌',
+    '.NET Core 3.1': '🔷',
+    '.NET': '⚡',
+    'Python': '🐍',
+
+    // Frontend
+    'HTML': '🏗️',
     'CSS': '🎨',
     'jQuery': '📜',
-    '.NET 4.0': '⚙️',
-    '.NET 6': '⚙️',
-    '.NET 8': '⚙️',
-    'Lambda Functions (Python 3.12)': 'λ',
-    'Python 3.12': '🐍',
+    'AngularJS': '🅰️',
+    'Angular': '🅰️',
+
+    // Bancos de Dados
+    'SQL Server': '🗄️',
+    'Postgres': '🐘',
+    'MongoDB': '🍃',
+    'Redis': '🧠',
+
+    // DevOps & Infraestrutura
+    'Docker': '🐳',
+    'Kubernetes': '☸️',
     'Linux': '🐧',
-    'Amazon SQS': '📬'
-  };
+    'CI/CD': '🔄',
+
+    // Cloud & Mensageria
+    'AWS EC2': '🖥️',
+    'AWS Lambda Functions (Python)': '⚡',
+    'AWS S3': '🪣',
+    'AWS SQS': '📬',
+    'RabbitMQ': '🐇'
+};
 
   ngOnInit() {
     this.prepareChartData();

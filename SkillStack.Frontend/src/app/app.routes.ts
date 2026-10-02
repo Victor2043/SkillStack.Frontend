@@ -11,12 +11,12 @@ import { ArticlesComponent } from './features/articles/articles.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterUserComponent },
   { path: 'activate', component: ActivateUserComponent },
-  { path: 'linq-playground', component: LinqPlaygroundComponent, canActivate: [AuthGuard] },  
-  { path: 'problem-solving-showcase', component: ProblemSolvingShowcaseComponent, canActivate: [AuthGuard] },
-  { path: 'technologies', component: TechnologiesComponent, canActivate: [AuthGuard] },
+  { path: 'linq-playground', component: LinqPlaygroundComponent },  
+  { path: 'problem-solving-showcase', component: ProblemSolvingShowcaseComponent  },
+  { path: 'technologies', component: TechnologiesComponent  },
   { path: 'articles', component: ArticlesComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

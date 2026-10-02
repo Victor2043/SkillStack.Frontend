@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { TranslationService } from './services/translation.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -30,7 +30,7 @@ import { MatDividerModule } from '@angular/material/divider';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'SkillStack.Frontend';
   showToolbar = true;
   translatedLogout: string = '';
@@ -38,7 +38,6 @@ export class AppComponent {
   currentPageTitle: string = '';
   developerMenuLabel: string = '';
   isMobile = false;
-
 
   languages = [
     { value: 'en-us', label: '🇺🇸 English (US)' },
@@ -51,15 +50,16 @@ export class AppComponent {
     { path: 'technologies', labelKey: 'TECHNOLOGIES-PAGE.TITLE', label: '' },
     { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' },
     { path: 'articles', labelKey: 'ARTICLES.TITLE', label: '' }
-  ];  
+  ];
 
   private routeTitleMap: { [key: string]: string } = {
     '/linq-playground': 'LINQ.TITLE',
     '/problem-solving-showcase': 'PROBLEM-SOLVING.TITLE',
-    '/technologies':'TECHNOLOGIES-PAGE.TITLE',
-    '/articles':'ARTICLES.TITLE',
-    '': 'HOME.TITLE' 
+    '/technologies': 'TECHNOLOGIES-PAGE.TITLE',
+    '/articles': 'ARTICLES.TITLE',
+    '': 'HOME.TITLE'
   };
+  
   constructor(
     private router: Router,
     private translationService: TranslationService,
@@ -67,22 +67,19 @@ export class AppComponent {
     private authService: AuthService,
     private breakpointObserver: BreakpointObserver
   ) {
-    this.translate.get('LOGOUT').subscribe((text: string) => {
-      this.translatedLogout = text;
-    });
-
-    this.translate.get('MENU.FEATURES').subscribe((text: string) => {
-      this.developerMenuLabel = text;
-    });
-
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
       this.isMobile = result.matches;
     });
-    
 
     this.selectedLanguage = this.translationService.getCurrentLanguage();
 
-    this.updatePageLabels();
+    // Atualiza todos os textos na carga inicial
+    this.refreshTranslations();
+
+    // Atualiza todos os textos sempre que o idioma mudar (único ponto de sincronização)
+    this.translate.onLangChange.subscribe(() => {
+      this.refreshTranslations();
+    });
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -98,9 +95,22 @@ export class AppComponent {
     this.updatePageTitle();
   }
 
+  private refreshTranslations() {
+    this.translate.get('LOGOUT').subscribe((text: string) => {
+      this.translatedLogout = text;
+    });
+
+    this.translate.get('MENU.FEATURES').subscribe((text: string) => {
+      this.developerMenuLabel = text;
+    });
+
+    this.updatePageTitle();
+    this.updatePageLabels();
+  }
+
   private updatePageTitle() {
-    const url = this.router.url.split('?')[0]; 
-    const titleKey = this.routeTitleMap[url] || 'HOME.TITLE'; 
+    const url = this.router.url.split('?')[0];
+    const titleKey = this.routeTitleMap[url] || 'HOME.TITLE';
 
     this.translate.get(titleKey).subscribe((text: string) => {
       this.currentPageTitle = text;
@@ -128,17 +138,9 @@ export class AppComponent {
   }
 
   changeLanguage(language: string) {
+    // As traduções são atualizadas automaticamente pelo onLangChange
     this.translationService.setLanguage(language);
-    this.translate.get('HOME.LOGOUT').subscribe((text: string) => {
-      this.translatedLogout = text;
-    });
-
-    this.translate.get('MENU.FEATURES').subscribe((text: string) => {
-      this.developerMenuLabel = text;
-    });
-    
-    this.updatePageTitle();
-    this.updatePageLabels(); 
+    this.selectedLanguage = language;
   }
 
   navigateTo(path: string) {
@@ -149,5 +151,4 @@ export class AppComponent {
     const page = this.pages.find(p => p.path === path);
     return page ? page.label : '';
   }
-  
 }

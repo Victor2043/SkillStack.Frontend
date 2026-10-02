@@ -49,13 +49,15 @@ export class AppComponent {
     { path: 'home', labelKey: 'HOME.TITLE', label: '' },
     { path: 'problem-solving-showcase', labelKey: 'PROBLEM-SOLVING.TITLE', label: '' },
     { path: 'technologies', labelKey: 'TECHNOLOGIES-PAGE.TITLE', label: '' },
-    { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' }
+    { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' },
+    { path: 'articles', labelKey: 'ARTICLES.TITLE', label: '' }
   ];  
 
   private routeTitleMap: { [key: string]: string } = {
     '/linq-playground': 'LINQ.TITLE',
     '/problem-solving-showcase': 'PROBLEM-SOLVING.TITLE',
     '/technologies':'TECHNOLOGIES-PAGE.TITLE',
+    '/articles':'ARTICLES.TITLE',
     '': 'HOME.TITLE' 
   };
   constructor(

@@ -1,0 +1,30 @@
+<div class="articles-container">
+  <h1>Artigos em Destaque</h1>
+
+  <div class="articles-grid">
+    <mat-card 
+      *ngFor="let article of articles" 
+      class="article-card" 
+      (click)="openArticle(article.id)">
+      
+      <mat-card-header>
+        <mat-card-title>{{ article.title }}</mat-card-title>
+        <mat-card-subtitle>{{ article.subtitle }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <img mat-card-image [src]="article.imageUrl" [alt]="article.title" />
+
+      <mat-card-content>
+        <p class="summary">{{ article.summary }}</p>
+        <div class="article-meta">
+          <span>Por <strong>{{ article.author }}</strong></span> • 
+          <span>{{ article.date }}</span>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-button color="primary">LER ARTIGO</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

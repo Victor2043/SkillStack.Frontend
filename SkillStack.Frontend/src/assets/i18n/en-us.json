@@ -147,5 +147,8 @@
       }
     }
   },
-  "LOGOUT": "Logout"
+  "LOGOUT": "Logout",
+  "ARTICLES": {
+    "TITLE": "Articles"
+  }
 }

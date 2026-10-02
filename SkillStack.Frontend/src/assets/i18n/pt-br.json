@@ -147,5 +147,8 @@
       }
     }
   },
-  "LOGOUT": "Sair"
+  "LOGOUT": "Sair",
+    "ARTICLES": {
+    "TITLE": "Artigos"
+  }
 }

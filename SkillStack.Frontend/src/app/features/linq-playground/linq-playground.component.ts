@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
-import { LinqService } from '../../../services/linq-service';
-import { Product } from '../../../core/entities/product';
+import { LinqService } from '../../services/linq-service';
+import { Product } from '../../core/entities/product';
 import * as monaco from 'monaco-editor';
 import loader from '@monaco-editor/loader';
 import { CommonModule } from '@angular/common';

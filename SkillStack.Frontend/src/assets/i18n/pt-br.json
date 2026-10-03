@@ -1,7 +1,7 @@
 {
   "MENU": {
-  "FEATURES": "Funcionalidades"
-},
+    "FEATURES": "Funcionalidades"
+  },
   "HOME": {
     "TITLE": "Início",
     "HERO": {
@@ -18,7 +18,7 @@
       "DQR_TECH": {
       "COMPANY": "DQR Tech (BTG Pactual)",
       "PERIOD": "2025 – 2026",
-        "ROLE1": {
+      "ROLE1": {
         "TITLE": "Analista Desenvolvedor Backend",
         "PERIOD": "Agosto 2025 – Abril 2026",
           "ACTIVITY1": "Desenvolvimento de novas funcionalidades e sustentação evolutiva em sistemas críticos de alta disponibilidade.",
@@ -86,17 +86,45 @@
   "LINQ": {
     "TITLE": "Linq Playground"
   },
-  "PROBLEM-SOLVING": {
+"PROBLEM-SOLVING": {
     "TITLE": "Destaques",
     "SUBTITLE": "Algumas das minhas entregas de maior impacto",
     "TIMELINE": {
+      "BATCH_AND_MIGRATION": {
+        "YEAR": "2026",
+        "COMPANY": "DQR Tech (BTG Pactual)",
+        "ACHIEVEMENTS": {
+          "BATCH_IMPORT": {
+            "TITLE": "Modernização da importação em lote",
+            "DESCRIPTION": "Eliminei a necessidade de particionamento manual de planilhas Excel ao reestruturar o fluxo de importação, permitindo o processamento integral dos arquivos em uma única operação."
+          },
+          "LEGACY_MIGRATION": {
+            "TITLE": "Migração de sistemas legados",
+            "DESCRIPTION": "Conduzi a migração do fluxo de aplicações de fundos FMP de arquiteturas legadas para novos microsserviços mais modernos e resilientes."
+          }
+        }
+      },
+      "PERFORMANCE_AND_SECURITY": {
+        "YEAR": "2025",
+        "COMPANY": "DQR Tech (BTG Pactual)",
+        "ACHIEVEMENTS": {
+          "JSON_OPTIMIZATION": {
+            "TITLE": "Otimização de consumo de memória em microsserviços",
+            "DESCRIPTION": "Substituí o serializador JSON legado por System.Text.Json, reduzindo significativamente a alocação de memória e aumentando o throughput do microsserviço no processamento de mensagens."
+          },
+          "AWS_SECRETS": {
+            "TITLE": "Refatoração de segurança com AWS Secrets Manager",
+            "DESCRIPTION": "Removi credenciais expostas em diversos microsserviços e centralizei a gestão de segredos no AWS Secrets Manager, elevando o nível de conformidade e segurança da arquitetura."
+          }
+        }
+      },
       "MAP_FEATURE": {
         "YEAR": "2024",
         "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
           "KML_UPLOAD": {
-            "TITLE": "Integração de arquivos de coordenadas ao mapa",
-            "DESCRIPTION": "Desenvolvi a funcionalidade de upload e leitura de arquivos KML em um sistema legado, permitindo a visualização no mapa integrado. Posteriormente, adaptei essa funcionalidade para um sistema mais recente, garantindo reuso de código e consistência."
+            "TITLE": "Otimização de custos em API de mapas com KML",
+            "DESCRIPTION": "Otimizei a leitura e o processamento de arquivos KML para renderização de coordenadas em mapa, reduzindo significativamente o consumo da API de terceiros e diminuindo os custos operacionais do projeto."
           }
         }
       },
@@ -167,7 +195,7 @@
     }
   },
   "LOGOUT": "Sair",
-    "ARTICLES": {
+  "ARTICLES": {
     "TITLE": "Artigos"
   }
 }

@@ -1,6 +1,6 @@
 {
   "MENU": {
-  "FEATURES": "Features"
+    "FEATURES": "Features"
   },
   "HOME": {
     "TITLE": "Home",
@@ -90,13 +90,41 @@
     "TITLE": "Highlights",
     "SUBTITLE": "Some of my most impactful deliveries",
     "TIMELINE": {
+      "BATCH_AND_MIGRATION": {
+        "YEAR": "2026",
+        "COMPANY": "DQR Tech (BTG Pactual)",
+        "ACHIEVEMENTS": {
+          "BATCH_IMPORT": {
+            "TITLE": "Batch import modernization",
+            "DESCRIPTION": "Eliminated the need for manual Excel sheet partitioning by redesigning the import flow, enabling single-operation file processing."
+          },
+          "LEGACY_MIGRATION": {
+            "TITLE": "Legacy systems migration",
+            "DESCRIPTION": "Led the migration of FMP fund application flows from legacy architectures to modern, resilient microservices."
+          }
+        }
+      },
+      "PERFORMANCE_AND_SECURITY": {
+        "YEAR": "2025",
+        "COMPANY": "DQR Tech (BTG Pactual)",
+        "ACHIEVEMENTS": {
+          "JSON_OPTIMIZATION": {
+            "TITLE": "Memory allocation optimization in microservices",
+            "DESCRIPTION": "Replaced the legacy JSON serializer with System.Text.Json, significantly reducing memory allocations and boosting microservice throughput during message processing."
+          },
+          "AWS_SECRETS": {
+            "TITLE": "Security refactoring with AWS Secrets Manager",
+            "DESCRIPTION": "Removed hardcoded credentials across multiple microservices and centralized secret management in AWS Secrets Manager, strengthening system security."
+          }
+        }
+      },
       "MAP_FEATURE": {
         "YEAR": "2024",
         "COMPANY": "Viceri-Seidor",
         "ACHIEVEMENTS": {
           "KML_UPLOAD": {
-            "TITLE": "Integration of coordinates files into the map",
-            "DESCRIPTION": "I developed a feature to upload and read KML files in a legacy system, enabling visualization on an integrated map. Later, I adapted this feature for a newer system, ensuring code reuse and consistency."
+            "TITLE": "Cost optimization for map APIs via KML",
+            "DESCRIPTION": "Optimized KML file reading and processing for rendering coordinates on maps, significantly reducing third-party API consumption and cutting operational costs."
           }
         }
       },

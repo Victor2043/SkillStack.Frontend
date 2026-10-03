@@ -24,7 +24,7 @@
     <ng-container *ngIf="!isMobile">
       <button mat-button (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
       <button mat-button (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
-      <button mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
+      <button *ngIf="false"  mat-icon-button (click)="logout()" [attr.aria-label]="translatedLogout">
         <mat-icon>logout</mat-icon>
       </button>
     </ng-container>

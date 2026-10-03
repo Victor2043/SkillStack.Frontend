@@ -15,20 +15,16 @@
     },
     "EXPERIENCES": {
       "TITLE": "Work Experience",
-      "BE3": {
-        "COMPANY": "Be3 Health Tech",
-        "PERIOD": "March 2020 – July 2021",
+      "DQR_TECH": {
+        "COMPANY": "DQR Tech (BTG Pactual)",
+        "PERIOD": "2025 – 2026",
         "ROLE1": {
-          "TITLE": "Intern",
-          "PERIOD": "March 2020 – December 2020",
-          "ACTIVITY1": "Developed front-end screens",
-          "ACTIVITY2": "Created some back-end features"
-        },
-        "ROLE2": {
-          "TITLE": "Programming Technician",
-          "PERIOD": "January 2021 – July 2021",
-          "ACTIVITY1": "Managed an API integrated with RPA",
-          "ACTIVITY2": "Wrote database queries using stored procedures"
+          "TITLE": "Backend Developer",
+          "PERIOD": "2025 – 2026",
+          "ACTIVITY1": "Development of new features and evolutionary maintenance on high-availability critical systems.",
+          "ACTIVITY2": "Planning and execution of progressive traffic rerouting from legacy applications to new microservices.",
+          "ACTIVITY3": "Upgrading and modernizing legacy applications to modern .NET versions.",
+          "ACTIVITY4": "Monitoring high availability, managing RabbitMQ message queues, and supervising Kubernetes pods via Rancher to minimize incident response times."
         }
       },
       "VICERI": {
@@ -37,15 +33,38 @@
         "ROLE1": {
           "TITLE": "Junior Software Developer",
           "PERIOD": "July 2021 – April 2022",
-          "ACTIVITY1": "Worked as a full-stack developer (front-end, back-end, and database queries)",
-          "ACTIVITY2": "Performed code reviews"
+          "ACTIVITY1": "UI design with Angular and screen performance tuning (unsubscribing from observables, shifting logic to the backend, and lazy loading).",
+          "ACTIVITY2": "Backend development in .NET 3.1 and .NET 6, implementing features and resolving low/medium complexity bugs.",
+          "ACTIVITY3": "Database query creation and maintenance.",
+          "ACTIVITY4": "Code reviews.",
+          "ACTIVITY5": "Unit testing creation to ensure deliverable quality."
         },
         "ROLE2": {
           "TITLE": "Mid-Level Software Developer",
-          "PERIOD": "May 2022 – March 2025",
-          "ACTIVITY1": "Worked on projects involving RPA",
-          "ACTIVITY2": "Optimized database queries using stored procedures",
-          "ACTIVITY3": "Mentored trainee developers"
+          "PERIOD": "April 2022 – March 2025",
+          "ACTIVITY1": "Database query optimization with Entity Framework pagination or caching.",
+          "ACTIVITY2": "Created AWS Lambda functions serving as BackgroundServices for third-party database synchronization.",
+          "ACTIVITY3": "API integration using practices such as Rate Limiting, Circuit Breaker, DLQ, and Cache to improve resilience.",
+          "ACTIVITY4": "CI/CD pipeline maintenance (artifact cleanup and rollback configuration).",
+          "ACTIVITY5": "Worked on legacy systems (Razor, jQuery, .NET 4.0/4.5), tuning stored procedures and delivering new features during migration.",
+          "ACTIVITY6": "Developed RPA bots for reading spreadsheets and converting them into proprietary formats for insurance processing.",
+          "ACTIVITY7": "Mentored trainee developers on clean code practices, variable naming conventions, and abstraction principles."
+        }
+      },
+      "BE3": {
+        "COMPANY": "Be3 Health Tech",
+        "PERIOD": "March 2020 – July 2021",
+        "ROLE1": {
+          "TITLE": "Fullstack Intern",
+          "PERIOD": "March 2020 – December 2020",
+          "ACTIVITY1": "Frontend development and maintenance using AngularJS.",
+          "ACTIVITY2": "Backend feature development and maintenance using .NET Core 3.1."
+        },
+        "ROLE2": {
+          "TITLE": "Programming Technician",
+          "PERIOD": "December 2020 – July 2021",
+          "ACTIVITY1": "Maintained a Python/Flask API hosted on AWS EC2, running demand-based Docker containers with Selenium and Selenoid for fetching medical records via RPA.",
+          "ACTIVITY2": "Created and maintained complex stored procedures for database operations."
         }
       }
     },

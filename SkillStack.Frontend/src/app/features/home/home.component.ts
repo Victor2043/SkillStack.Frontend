@@ -15,23 +15,17 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent {
   experiences = [
     {
-      company: 'HOME.EXPERIENCES.BE3.COMPANY',
-      period: 'HOME.EXPERIENCES.BE3.PERIOD',
+      company: 'HOME.EXPERIENCES.DQR_TECH.COMPANY',
+      period: 'HOME.EXPERIENCES.DQR_TECH.PERIOD',
       roles: [
         {
-          title: 'HOME.EXPERIENCES.BE3.ROLE1.TITLE',
-          period: 'HOME.EXPERIENCES.BE3.ROLE1.PERIOD',
+          title: 'HOME.EXPERIENCES.DQR_TECH.ROLE1.TITLE',
+          period: 'HOME.EXPERIENCES.DQR_TECH.ROLE1.PERIOD',
           activities: [
-            'HOME.EXPERIENCES.BE3.ROLE1.ACTIVITY1',
-            'HOME.EXPERIENCES.BE3.ROLE1.ACTIVITY2'
-          ]
-        },
-        {
-          title: 'HOME.EXPERIENCES.BE3.ROLE2.TITLE',
-          period: 'HOME.EXPERIENCES.BE3.ROLE2.PERIOD',
-          activities: [
-            'HOME.EXPERIENCES.BE3.ROLE2.ACTIVITY1',
-            'HOME.EXPERIENCES.BE3.ROLE2.ACTIVITY2'
+            'HOME.EXPERIENCES.DQR_TECH.ROLE1.ACTIVITY1',
+            'HOME.EXPERIENCES.DQR_TECH.ROLE1.ACTIVITY2',
+            'HOME.EXPERIENCES.DQR_TECH.ROLE1.ACTIVITY3',
+            'HOME.EXPERIENCES.DQR_TECH.ROLE1.ACTIVITY4'
           ]
         }
       ]
@@ -41,14 +35,6 @@ export class HomeComponent {
       period: 'HOME.EXPERIENCES.VICERI.PERIOD',
       roles: [
         {
-          title: 'HOME.EXPERIENCES.VICERI.ROLE1.TITLE',
-          period: 'HOME.EXPERIENCES.VICERI.ROLE1.PERIOD',
-          activities: [
-            'HOME.EXPERIENCES.VICERI.ROLE1.ACTIVITY1',
-            'HOME.EXPERIENCES.VICERI.ROLE1.ACTIVITY2'
-          ]
-        },
-        {
           title: 'HOME.EXPERIENCES.VICERI.ROLE2.TITLE',
           period: 'HOME.EXPERIENCES.VICERI.ROLE2.PERIOD',
           activities: [
@@ -56,12 +42,43 @@ export class HomeComponent {
             'HOME.EXPERIENCES.VICERI.ROLE2.ACTIVITY2',
             'HOME.EXPERIENCES.VICERI.ROLE2.ACTIVITY3'
           ]
+        },
+        {
+          title: 'HOME.EXPERIENCES.VICERI.ROLE1.TITLE',
+          period: 'HOME.EXPERIENCES.VICERI.ROLE1.PERIOD',
+          activities: [
+            'HOME.EXPERIENCES.VICERI.ROLE1.ACTIVITY1',
+            'HOME.EXPERIENCES.VICERI.ROLE1.ACTIVITY2'
+          ]
+        }
+        
+      ]
+    },
+     {
+      company: 'HOME.EXPERIENCES.BE3.COMPANY',
+      period: 'HOME.EXPERIENCES.BE3.PERIOD',
+      roles: [        
+        {
+          title: 'HOME.EXPERIENCES.BE3.ROLE2.TITLE',
+          period: 'HOME.EXPERIENCES.BE3.ROLE2.PERIOD',
+          activities: [
+            'HOME.EXPERIENCES.BE3.ROLE2.ACTIVITY1',
+            'HOME.EXPERIENCES.BE3.ROLE2.ACTIVITY2'
+          ]
+        },
+        {
+          title: 'HOME.EXPERIENCES.BE3.ROLE1.TITLE',
+          period: 'HOME.EXPERIENCES.BE3.ROLE1.PERIOD',
+          activities: [
+            'HOME.EXPERIENCES.BE3.ROLE1.ACTIVITY1',
+            'HOME.EXPERIENCES.BE3.ROLE1.ACTIVITY2'
+          ]
         }
       ]
-    }
+    }    
   ];
 
-  technologies = ['Angular', '.NET', 'C#', 'TypeScript', 'Python', 'SQL'];
+  technologies = ['.NET', 'Angular', 'Python', 'SQL', 'RabbitMQ', 'Docker', 'Linux', 'AWS', 'Rancher', 'Kubernetes'];
 
   constructor(private router: Router) {}
 

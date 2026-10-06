@@ -30,7 +30,7 @@ import { MatDividerModule } from '@angular/material/divider';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'SkillStack.Frontend';
   showToolbar = true;
   translatedLogout: string = '';
@@ -88,12 +88,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    this.authService.isLoggedIn().subscribe((loggedIn: boolean) => {
-      this.showToolbar = loggedIn;
-    });
-    this.updatePageTitle();
-  }
+
 
   private refreshTranslations() {
     this.translate.get('LOGOUT').subscribe((text: string) => {

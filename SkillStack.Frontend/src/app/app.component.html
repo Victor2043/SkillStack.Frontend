@@ -10,7 +10,7 @@
       </button>
     </ng-container>
 
-    <button mat-button [matMenuTriggerFor]="devMenu">
+    <button mat-button *ngIf="false" [matMenuTriggerFor]="devMenu">
       {{ developerMenuLabel }}
     </button>
     <mat-menu #devMenu="matMenu">
@@ -29,7 +29,7 @@
       </button>
     </ng-container>
 
-    <!-- Mobile menu -->
+      <!-- Mobile menu -->
     <ng-container *ngIf="isMobile">
       <button mat-icon-button [matMenuTriggerFor]="mobileMenu">
         <mat-icon>menu</mat-icon>
@@ -40,13 +40,16 @@
             {{ page.label }}
           </button>
         </ng-container>
-        <button mat-menu-item (click)="navigateTo('linq-playground')">
+        
+        <!-- Caso queira ocultar o Linq Playground no mobile também, basta adicionar *ngIf="false" -->
+        <button mat-menu-item *ngIf="false" (click)="navigateTo('linq-playground')">
           {{ getPageLabel('linq-playground') }}
         </button>
+        
         <mat-divider></mat-divider>
         <button mat-menu-item (click)="changeLanguage('en-us')">🇺🇸 EN-US</button>
         <button mat-menu-item (click)="changeLanguage('pt-br')">🇧🇷 PT-BR</button>
-        <button mat-menu-item (click)="logout()">
+        <button mat-menu-item (click)="logout()" *ngIf="false">
           <mat-icon>logout</mat-icon> {{ translatedLogout }}
         </button>
       </mat-menu>

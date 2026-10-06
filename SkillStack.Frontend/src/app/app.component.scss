@@ -17,3 +17,10 @@ mat-toolbar {
   justify-content: center;
   flex: 1;
 }
+
+/* Ajustes específicos para mobile */
+@media (max-width: 768px) {
+  mat-toolbar {
+    padding: 0 16px;
+  }
+}

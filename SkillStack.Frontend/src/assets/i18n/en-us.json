@@ -5,13 +5,13 @@
   "HOME": {
     "TITLE": "Home",
     "HERO": {
-      "TITLE": "Victor Alves",
-      "SUBTITLE": "Full-Stack Developer | Angular & .NET",
+      "TITLE": "Victor Alves Mendes",
+      "SUBTITLE": "Full-Stack Developer | .NET & Angular",
       "BUTTON": "Explore My Work"
     },
     "ABOUT": {
       "TITLE": "About Me",
-      "DESCRIPTION": "I'm Victor Alves. A tech enthusiast since childhood, I went from tinkering with computers to writing code. Today, I'm a developer with solid experience in Python, Angular, and .NET, and always eager to learn new technologies. In my free time, I enjoy working out, playing video games, and card games with friends."
+      "DESCRIPTION": "I'm Victor. A tech enthusiast since childhood, I went from tinkering with computers to writing code. Today, I'm a developer with solid experience in Python, Angular, and .NET, and always eager to learn new technologies. In my free time, I enjoy working out, playing video games, and card games with friends."
     },
     "EXPERIENCES": {
       "TITLE": "Work Experience",

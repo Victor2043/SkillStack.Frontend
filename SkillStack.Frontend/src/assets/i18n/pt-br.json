@@ -5,13 +5,13 @@
   "HOME": {
     "TITLE": "Início",
     "HERO": {
-      "TITLE": "Victor Alves",
-      "SUBTITLE": "Desenvolvedor Full-Stack | Angular & .NET",
+      "TITLE": "Victor Alves Mendes",
+      "SUBTITLE": "Desenvolvedor Full-Stack | .NET & Angular",
       "BUTTON": "Explore Meu Trabalho"
     },
     "ABOUT": {
       "TITLE": "Sobre Mim",
-      "DESCRIPTION": "Sou Victor Alves. Entusiasta de tecnologia desde criança, comecei em cursos de montagem de computadores e me apaixonei pela programação. Hoje, sou desenvolvedor com experiência sólida em Python, Angular e .NET, e estou sempre aberto a aprender novas tecnologias. Nos momentos livres, gosto de fazer exercícios, jogar videogames e partidas de baralho com amigos."
+      "DESCRIPTION": "Sou Victor. Entusiasta de tecnologia desde criança, comecei em cursos de montagem de computadores e me apaixonei pela programação. Hoje, sou desenvolvedor com experiência sólida em Python, Angular e .NET, e estou sempre aberto a aprender novas tecnologias. Nos momentos livres, gosto de fazer exercícios, jogar videogames e partidas de baralho com amigos."
     },
     "EXPERIENCES": {
       "TITLE": "Experiências",

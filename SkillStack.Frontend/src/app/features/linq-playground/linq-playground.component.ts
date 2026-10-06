@@ -1,10 +1,9 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { LinqService } from '../../services/linq-service';
 import { Product } from '../../core/entities/product';
-import * as monaco from 'monaco-editor';
+import type * as monaco from 'monaco-editor';
 import loader from '@monaco-editor/loader';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
   selector: 'app-linq-playground',
@@ -21,14 +20,18 @@ export class LinqPlaygroundComponent implements AfterViewInit {
     { id: 2, name: 'Smartphone', price: 1500 },
     { id: 3, name: 'Tablet', price: 800 }
   ];
+
   constructor(
     private linqService: LinqService,
     private el: ElementRef
   ) {}
 
   ngAfterViewInit() {
-    loader.init().then(() => {
-      this.editor = monaco.editor.create(
+    // Configura o caminho dos assets estáticos apontando para a pasta local definida no angular.json
+    loader.config({ paths: { vs: 'assets/vs' } });
+
+    loader.init().then((monacoInstance) => {
+      this.editor = monacoInstance.editor.create(
         this.el.nativeElement.querySelector('#editor-container'), 
         {
           value: 'products.Where(p => p.Price > 100);',

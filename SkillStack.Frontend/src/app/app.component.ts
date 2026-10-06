@@ -48,8 +48,8 @@ export class AppComponent implements OnInit {
     { path: 'home', labelKey: 'HOME.TITLE', label: '' },
     { path: 'problem-solving-showcase', labelKey: 'PROBLEM-SOLVING.TITLE', label: '' },
     { path: 'technologies', labelKey: 'TECHNOLOGIES-PAGE.TITLE', label: '' },
-    { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' },
-    { path: 'articles', labelKey: 'ARTICLES.TITLE', label: '' }
+    { path: 'linq-playground', labelKey: 'LINQ.TITLE', label: '' }
+    //{ path: 'articles', labelKey: 'ARTICLES.TITLE', label: '' }
   ];
 
   private routeTitleMap: { [key: string]: string } = {

@@ -1,6 +1,19 @@
 <section class="hero">
   <h1>{{ 'HOME.HERO.TITLE' | translate }}</h1>
   <p>{{ 'HOME.HERO.SUBTITLE' | translate }}</p>
+
+  <div class="social-links">
+    <a *ngFor="let link of socialLinks"
+       class="social-link"
+       [ngClass]="link.name"
+       [href]="link.url"
+       [attr.aria-label]="link.label"
+       [attr.title]="link.label"
+       [attr.target]="link.external ? '_blank' : null"
+       [attr.rel]="link.external ? 'noopener noreferrer' : null">
+      <i [class]="link.icon" aria-hidden="true"></i>
+    </a>
+  </div>
 </section>
 
 <section class="about">
@@ -48,5 +61,17 @@
   <button mat-raised-button color="warn" [routerLink]="['/technologies']">
     {{ 'HOME.CTA.BUTTON2' | translate }}
   </button>
-  
+
+  <div class="social-links">
+    <a *ngFor="let link of socialLinks"
+       class="social-link"
+       [ngClass]="link.name"
+       [href]="link.url"
+       [attr.aria-label]="link.label"
+       [attr.title]="link.label"
+       [attr.target]="link.external ? '_blank' : null"
+       [attr.rel]="link.external ? 'noopener noreferrer' : null">
+      <i [class]="link.icon" aria-hidden="true"></i>
+    </a>
+  </div>
 </section>

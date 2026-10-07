@@ -13,6 +13,38 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  // TODO: substitua pelos seus dados reais
+  socialLinks = [
+    {
+      name: 'whatsapp',
+      label: 'WhatsApp',
+      icon: 'fa-brands fa-whatsapp',
+      url: 'https://wa.me/5511994321354',
+      external: true
+    },
+    {
+      name: 'linkedin',
+      label: 'LinkedIn',
+      icon: 'fa-brands fa-linkedin-in',
+      url: 'https://www.linkedin.com/in/victor2043',
+      external: true
+    },
+    {
+      name: 'email',
+      label: 'Email',
+      icon: 'fa-solid fa-envelope',
+      url: 'mailto:Victor.alves19@outlook.com.br',
+      external: false
+    },
+    {
+      name: 'github',
+      label: 'GitHub',
+      icon: 'fa-brands fa-github',
+      url: 'https://github.com/Victor2043/',
+      external: true
+    }
+  ];
+
   experiences = [
     {
       company: 'HOME.EXPERIENCES.DQR_TECH.COMPANY',
@@ -51,13 +83,12 @@ export class HomeComponent {
             'HOME.EXPERIENCES.VICERI.ROLE1.ACTIVITY2'
           ]
         }
-        
       ]
     },
-     {
+    {
       company: 'HOME.EXPERIENCES.BE3.COMPANY',
       period: 'HOME.EXPERIENCES.BE3.PERIOD',
-      roles: [        
+      roles: [
         {
           title: 'HOME.EXPERIENCES.BE3.ROLE2.TITLE',
           period: 'HOME.EXPERIENCES.BE3.ROLE2.PERIOD',
@@ -75,7 +106,7 @@ export class HomeComponent {
           ]
         }
       ]
-    }    
+    }
   ];
 
   technologies = ['.NET', 'Angular', 'Python', 'SQL', 'RabbitMQ', 'Docker', 'Linux', 'AWS', 'Rancher', 'Kubernetes'];

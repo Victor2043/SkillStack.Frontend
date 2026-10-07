@@ -12,6 +12,44 @@
   }
 }
 
+/* Ícones de redes sociais (hero e CTA) */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+    background: #444;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-3px);
+    }
+
+    &.whatsapp:hover,
+    &.whatsapp:focus-visible { background: #25d366; }
+    &.linkedin:hover,
+    &.linkedin:focus-visible { background: #0a66c2; }
+    &.email:hover,
+    &.email:focus-visible { background: #ea4335; }
+    &.github:hover,
+    &.github:focus-visible { background: #24292e; }
+  }
+}
+
 .about {
   padding: 20px;
   mat-card {
@@ -113,6 +151,9 @@
   button {
     margin: 0 10px;
   }
+  .social-links {
+    margin-top: 32px;
+  }
 }
 
 li {
@@ -174,6 +215,15 @@ li {
     }
     p {
       font-size: 1rem;
+    }
+  }
+
+  .social-links {
+    gap: 12px;
+    .social-link {
+      width: 44px;
+      height: 44px;
+      font-size: 20px;
     }
   }
   

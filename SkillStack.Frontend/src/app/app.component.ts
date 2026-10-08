@@ -12,6 +12,7 @@ import { filter } from 'rxjs/operators';
 import { MatMenuModule } from '@angular/material/menu';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatDividerModule } from '@angular/material/divider';
+import { TrackingService } from './services/tracking.service';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,7 @@ import { MatDividerModule } from '@angular/material/divider';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'SkillStack.Frontend';
   showToolbar = true;
   translatedLogout: string = '';
@@ -65,7 +66,8 @@ export class AppComponent {
     private translationService: TranslationService,
     private translate: TranslateService,
     private authService: AuthService,
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    private trackingService: TrackingService 
   ) {
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
       this.isMobile = result.matches;
@@ -87,7 +89,10 @@ export class AppComponent {
       this.updatePageTitle();
     });
   }
-
+  
+  ngOnInit(): void {
+     this.trackingService.init();
+  }
 
 
   private refreshTranslations() {

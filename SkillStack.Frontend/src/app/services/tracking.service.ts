@@ -12,7 +12,7 @@ export class TrackingService {
 
    init() {
     if (this.shouldIgnore()) return;
-    this.router.events
+        this.router.events
         .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
         .subscribe(e => {
             const visit: Visit = {

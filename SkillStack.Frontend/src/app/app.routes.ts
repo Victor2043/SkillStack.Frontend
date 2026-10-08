@@ -8,6 +8,7 @@ import { LinqPlaygroundComponent } from './features/linq-playground/linq-playgro
 import { ProblemSolvingShowcaseComponent } from './features/problem-solving-showcase/problem-solving-showcase/problem-solving-showcase.component';
 import { TechnologiesComponent } from './features/technologies/technologies.component';
 import { ArticlesComponent } from './features/articles/articles.component';
+import { IgnoreMeComponent } from './features/ignoreme/ignoreme.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,5 +19,6 @@ export const routes: Routes = [
   { path: 'problem-solving-showcase', component: ProblemSolvingShowcaseComponent  },
   { path: 'technologies', component: TechnologiesComponent  },
   { path: 'articles', component: ArticlesComponent },
+  { path: 'ignore-me', component: IgnoreMeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
